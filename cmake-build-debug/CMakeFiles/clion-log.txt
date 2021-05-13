@@ -1,0 +1,19 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/raduvrinceanu/Desktop/backend
+-- The CXX compiler identification is AppleClang 12.0.0.12000032
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found TreeFrog include: /usr/local/include/treefrog
+-- Found TreeFrog library: /usr/local/lib/libtreefrog.dylib
+-- Found TreeFrog tmake command: /usr/local/bin/tmake
+Erb.DefaultTrimMode: 1
+  exists   /Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views
+-- Set CMAKE_GENERATOR: Unix Makefiles
+-- Set CMAKE_BUILD_TYPE: Debug
+-- Added a custom target for build: 'cmake'
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/raduvrinceanu/Desktop/backend/cmake-build-debug

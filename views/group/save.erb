@@ -1,0 +1,53 @@
+<%#include "group.h" %>
+<% tfetch(QVariantMap, group); %>
+<h1 class="title">Show Group Informations</h1>
+<%== formTag(urla("save", group["id"]), Tf::Post, true, a("class", "box")) %>
+  <div class="field">
+    <label class="label">Group name</label>
+    <div class="control">
+      <input class="input" type="text" name="group[name]" value="<%= group["name"] %>" placeholder="e.g. Elon Musk's groups" />
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Invite link</label>
+    <div class="control is-flex">
+      <input id="invite" class="input" type="text" name="group[invite]" value="<%= group["invite"] %>" placeholder="DEFAULT_INVITE" />
+      <a class="button is-warning is-selected" onclick="document.getElementById('invite').value = Math.random().toString(36).replace(/[^a-z]+/g, '');"><i class="fas fa-sync-alt"></i></a>
+    </div>
+  </div>
+  <button class="button is-link" type="submit">Submit</button>
+</form>
+<% tfetch(QList<QVariantMap>, memberList) %>
+<h1 class="title">Listing Members</h1>
+<div class="box is-flex is-justify-content-center is-align-items-center">
+  <table class="table">
+    <thead>
+      <tr>
+        <th><abbr title="Group name">Username and name</abbr></th>
+        <th><abbr title="Role in group">Role in group</abbr></th>
+        <th><abbr title="Options">Options</abbr></th>
+      </tr>
+    </thead>
+    <% 
+        for (const auto &i : memberList) { 
+    %>
+      <tr>
+        <th>
+          <%= i["name"] %>
+          <small class="has-text-gray"><%= i["username"] %></small>
+        </th>
+        <td>
+          <span class="tag <%= i["role"] == 2 ? "is-warning" : "is-dark" %>">
+            <%= i["role"] == 2 ? "Teacher" : "Student" %>
+          </span>
+        </td>
+        
+        <td>
+          <% if (i["role"] != 2) { %>
+          <%== linkTo("Kick", urla("kick", (QStringList() << i["uid"].toString() << group["id"].toString())), Tf::Post, "confirm('Are you sure?')", a("class", "button is-danger is-small")) %>
+          <% } %>
+        </td>
+      </tr>
+    <% } %>
+  </table>
+</div>

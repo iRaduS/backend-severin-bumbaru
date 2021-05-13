@@ -1,0 +1,261 @@
+2021-05-12 19:19:14 ERROR [523899] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:19:14 ERROR [523900] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:19:14 ERROR [523904] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:24:20 ERROR [527838] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:24:20 ERROR [527840] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:24:20 ERROR [527848] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:24:24 ERROR [527892] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:24:24 ERROR [527893] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:24:24 ERROR [527901] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:26:58 ERROR [530090] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:26:58 ERROR [530092] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:26:58 ERROR [530101] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:26:59 ERROR [530136] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:26:59 ERROR [530138] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:26:59 ERROR [530145] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:50:40 ERROR [547707] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:50:40 ERROR [547709] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 19:50:40 ERROR [547717] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:00:04 ERROR [556102] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:01:31 ERROR [557412] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:01:31 ERROR [557414] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:01:31 ERROR [557422] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:04:12 ERROR [560110] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:04:12 ERROR [560112] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:04:12 ERROR [560121] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:04:18 ERROR [560152] test: 1
+2021-05-12 20:06:19 ERROR [562348] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:06:19 ERROR [562349] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:06:19 ERROR [562357] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:06:22 ERROR [562396] test: 1
+2021-05-12 20:06:23 ERROR [562396] test: 1
+2021-05-12 20:06:24 ERROR [562396] test: 1
+2021-05-12 20:06:24 ERROR [562396] test: 1
+2021-05-12 20:06:24 ERROR [562396] test: 1
+2021-05-12 20:06:25 ERROR [562396] test: 1
+2021-05-12 20:06:25 ERROR [562396] test: 1
+2021-05-12 20:07:54 ERROR [563981] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:07:54 ERROR [563983] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:07:54 ERROR [563991] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:12:10 ERROR [567930] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:12:10 ERROR [567932] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:12:10 ERROR [567939] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:18:44 ERROR [574054] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:18:44 ERROR [574056] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:18:44 ERROR [574064] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:18:46 ERROR [574100] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:18:46 ERROR [574101] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:18:46 ERROR [574108] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:21:59 ERROR [576702] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:21:59 ERROR [576704] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:21:59 ERROR [576826] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:24:53 ERROR [578650] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:24:53 ERROR [578651] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:24:53 ERROR [578668] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:25:02 ERROR [578708] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:25:02 ERROR [578709] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:25:02 ERROR [578813] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:28:09 ERROR [581312] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:28:09 ERROR [581313] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 20:28:09 ERROR [581317] Caught SecurityException: Invalid authenticity token  [tactioncontext.cpp:148]
+2021-05-12 21:24:26 FATAL [40658] 0
+2021-05-12 21:24:27 FATAL [40658] 0
+2021-05-12 21:30:41 FATAL [44067] results -1
+2021-05-12 21:30:41 FATAL [44067] 0
+2021-05-12 21:30:41 FATAL [44067] results -1
+2021-05-12 21:30:41 FATAL [44067] 0
+2021-05-12 21:32:51 FATAL [45192] results -1
+2021-05-12 21:32:51 FATAL [45192] 0
+2021-05-12 21:32:52 FATAL [45192] results -1
+2021-05-12 21:32:52 FATAL [45192] 0
+2021-05-12 21:32:53 FATAL [45192] results -1
+2021-05-12 21:32:53 FATAL [45192] 0
+2021-05-12 21:32:53 FATAL [45192] results -1
+2021-05-12 21:32:53 FATAL [45192] 0
+2021-05-12 21:32:53 FATAL [45192] results -1
+2021-05-12 21:32:53 FATAL [45192] 0
+2021-05-12 21:32:53 FATAL [45192] results -1
+2021-05-12 21:32:53 FATAL [45192] 0
+2021-05-12 21:32:54 FATAL [45192] results -1
+2021-05-12 21:32:54 FATAL [45192] 0
+2021-05-12 21:32:54 FATAL [45192] results -1
+2021-05-12 21:32:54 FATAL [45192] 0
+2021-05-12 21:32:54 FATAL [45192] results -1
+2021-05-12 21:32:54 FATAL [45192] 0
+2021-05-12 21:42:27 FATAL [49551] This is the id: 1
+2021-05-12 21:42:28 FATAL [49551] This is the id: 1
+2021-05-12 21:43:08 FATAL [50127] This is the id: 1
+2021-05-12 21:43:08 FATAL [50127] This is the id: 2
+2021-05-12 21:43:10 FATAL [50127] This is the id: 1
+2021-05-12 21:43:10 FATAL [50127] This is the id: 2
+2021-05-12 21:43:11 FATAL [50127] This is the id: 1
+2021-05-12 21:43:11 FATAL [50127] This is the id: 2
+2021-05-12 21:43:58 FATAL [50891] results -1
+2021-05-12 21:43:58 FATAL [50891] 2
+2021-05-12 21:45:21 FATAL [52054] 2
+2021-05-12 21:45:21 FATAL [52054] 2
+2021-05-12 21:45:22 FATAL [52054] 2
+2021-05-12 21:45:22 FATAL [52054] 2
+2021-05-12 21:45:22 FATAL [52054] 2
+2021-05-12 21:45:22 FATAL [52054] 2
+2021-05-12 21:45:22 FATAL [52054] 2
+2021-05-12 21:45:22 FATAL [52054] 2
+2021-05-12 21:45:23 FATAL [52054] 2
+2021-05-12 21:45:23 FATAL [52054] 2
+2021-05-12 21:47:29 FATAL [54037] 2
+2021-05-12 21:47:29 FATAL [54037] 2
+2021-05-12 21:47:30 FATAL [54037] 2
+2021-05-12 21:47:30 FATAL [54037] 2
+2021-05-12 21:47:30 FATAL [54037] 2
+2021-05-12 21:47:30 FATAL [54037] 2
+2021-05-12 21:47:30 FATAL [54037] 2
+2021-05-12 21:47:30 FATAL [54037] 2
+2021-05-12 21:47:30 FATAL [54037] 2
+2021-05-12 21:47:30 FATAL [54037] 2
+2021-05-12 21:54:12 FATAL [58330] 2
+2021-05-12 21:54:12 FATAL [58330] 2
+2021-05-12 21:54:42 FATAL [59102] 2
+2021-05-12 21:54:42 FATAL [59102] 2
+2021-05-12 21:54:43 FATAL [59102] 2
+2021-05-12 21:54:43 FATAL [59102] 2
+2021-05-12 21:54:43 FATAL [59102] 2
+2021-05-12 21:54:43 FATAL [59102] 2
+2021-05-12 21:54:43 FATAL [59102] 2
+2021-05-12 21:54:43 FATAL [59102] 2
+2021-05-12 21:54:43 FATAL [59102] 2
+2021-05-12 21:54:43 FATAL [59102] 2
+2021-05-12 21:54:43 FATAL [59102] 2
+2021-05-12 21:54:43 FATAL [59102] 2
+2021-05-12 21:54:44 FATAL [59102] 2
+2021-05-12 21:54:44 FATAL [59102] 2
+2021-05-12 21:55:11 FATAL [59998] 2
+2021-05-12 21:55:11 FATAL [59998] 2
+2021-05-12 21:56:05 FATAL [61370] 2
+2021-05-12 21:56:05 FATAL [61370] 2
+2021-05-12 21:56:06 FATAL [61370] 2
+2021-05-12 21:56:06 FATAL [61370] 2
+2021-05-12 21:56:06 FATAL [61370] 2
+2021-05-12 21:56:06 FATAL [61370] 2
+2021-05-12 21:56:06 FATAL [61370] 2
+2021-05-12 21:56:06 FATAL [61370] 2
+2021-05-12 21:56:07 FATAL [61370] 2
+2021-05-12 21:56:07 FATAL [61370] 2
+2021-05-12 21:56:07 FATAL [61370] 2
+2021-05-12 21:56:07 FATAL [61370] 2
+2021-05-12 21:56:07 FATAL [61370] 2
+2021-05-12 21:56:07 FATAL [61370] 2
+2021-05-12 21:56:07 FATAL [61370] 2
+2021-05-12 21:56:07 FATAL [61370] 2
+2021-05-12 21:56:07 FATAL [61370] 2
+2021-05-12 21:56:07 FATAL [61370] 2
+2021-05-12 21:56:07 FATAL [61370] 2
+2021-05-12 21:56:07 FATAL [61370] 2
+2021-05-12 21:56:08 FATAL [61370] 2
+2021-05-12 21:56:08 FATAL [61370] 2
+2021-05-12 21:56:08 FATAL [61370] 2
+2021-05-12 21:56:08 FATAL [61370] 2
+2021-05-12 21:56:08 FATAL [61370] 2
+2021-05-12 21:56:08 FATAL [61370] 2
+2021-05-12 21:56:33 FATAL [62060] 2
+2021-05-12 21:56:33 FATAL [62060] 2
+2021-05-12 21:56:33 FATAL [62060] 2
+2021-05-12 21:56:33 FATAL [62060] 2
+2021-05-12 21:56:33 FATAL [62060] 2
+2021-05-12 21:56:33 FATAL [62060] 2
+2021-05-12 21:56:33 FATAL [62060] 2
+2021-05-12 21:56:33 FATAL [62060] 2
+2021-05-12 21:56:34 FATAL [62060] 2
+2021-05-12 21:56:34 FATAL [62060] 2
+2021-05-12 21:56:34 FATAL [62060] 2
+2021-05-12 21:56:34 FATAL [62060] 2
+2021-05-12 21:56:34 FATAL [62060] 2
+2021-05-12 21:56:34 FATAL [62060] 2
+2021-05-12 21:56:34 FATAL [62060] 2
+2021-05-12 21:56:34 FATAL [62060] 2
+2021-05-12 21:56:35 FATAL [62060] 2
+2021-05-12 21:56:35 FATAL [62060] 2
+2021-05-12 21:56:35 FATAL [62060] 2
+2021-05-12 21:56:35 FATAL [62060] 2
+2021-05-12 21:56:35 FATAL [62060] 2
+2021-05-12 21:56:35 FATAL [62060] 2
+2021-05-12 22:01:54 FATAL [65138] 2
+2021-05-12 22:01:54 FATAL [65138] 2
+2021-05-12 22:01:55 FATAL [65138] 2
+2021-05-12 22:01:55 FATAL [65138] 2
+2021-05-12 22:01:55 FATAL [65138] 2
+2021-05-12 22:01:55 FATAL [65138] 2
+2021-05-12 22:01:55 FATAL [65138] 2
+2021-05-12 22:01:55 FATAL [65138] 2
+2021-05-12 22:01:55 FATAL [65138] 2
+2021-05-12 22:01:55 FATAL [65138] 2
+2021-05-12 22:01:56 FATAL [65138] 2
+2021-05-12 22:01:56 FATAL [65138] 2
+2021-05-12 22:02:00 FATAL [65138] 2
+2021-05-12 22:02:00 FATAL [65138] 2
+2021-05-12 22:02:01 FATAL [65315] 2
+2021-05-12 22:02:01 FATAL [65315] 2
+2021-05-12 22:02:01 FATAL [65315] 2
+2021-05-12 22:02:01 FATAL [65315] 2
+2021-05-12 22:02:02 FATAL [65315] 2
+2021-05-12 22:02:02 FATAL [65315] 2
+2021-05-12 22:02:05 FATAL [65315] 2
+2021-05-12 22:02:05 FATAL [65315] 2
+2021-05-12 22:02:48 FATAL [66146] 2
+2021-05-12 22:02:48 FATAL [66146] 2
+2021-05-12 22:02:49 FATAL [66146] 2
+2021-05-12 22:02:49 FATAL [66146] 2
+2021-05-12 22:02:49 FATAL [66146] 2
+2021-05-12 22:02:49 FATAL [66146] 2
+2021-05-12 22:02:49 FATAL [66146] 2
+2021-05-12 22:02:49 FATAL [66146] 2
+2021-05-12 22:02:49 FATAL [66146] 2
+2021-05-12 22:02:49 FATAL [66146] 2
+2021-05-12 22:02:50 FATAL [66146] 2
+2021-05-12 22:02:50 FATAL [66146] 2
+2021-05-12 22:02:50 FATAL [66146] 2
+2021-05-12 22:02:50 FATAL [66146] 2
+2021-05-12 22:02:50 FATAL [66146] 2
+2021-05-12 22:02:50 FATAL [66146] 2
+2021-05-12 22:02:50 FATAL [66146] 2
+2021-05-12 22:02:50 FATAL [66146] 2
+2021-05-12 22:02:51 FATAL [66146] 2
+2021-05-12 22:02:51 FATAL [66146] 2
+2021-05-12 22:42:41 WARN  [100483] invalid name: id
+2021-05-12 22:42:41 WARN  [100483] invalid name: name
+2021-05-12 22:42:41 WARN  [100483] invalid name: invite
+2021-05-12 22:42:41 WARN  [100483] invalid name: user_id
+2021-05-12 22:42:41 WARN  [100483] SQL statement error, no fields to insert
+2021-05-12 22:42:43 WARN  [100483] invalid name: id
+2021-05-12 22:42:43 WARN  [100483] invalid name: name
+2021-05-12 22:42:43 WARN  [100483] invalid name: invite
+2021-05-12 22:42:43 WARN  [100483] invalid name: user_id
+2021-05-12 22:42:43 WARN  [100483] SQL statement error, no fields to insert
+2021-05-12 23:55:30 FATAL [150710] dada -1
+2021-05-12 23:55:57 FATAL [151114] dada -1
+2021-05-12 23:57:18 FATAL [152038] dada -1
+2021-05-12 23:57:29 FATAL [152248] dada -1
+2021-05-12 23:57:34 FATAL [152248] dada -1
+2021-05-12 23:59:35 FATAL [153945] dada -1
+2021-05-12 23:59:48 FATAL [154291] dada -1
+2021-05-13 00:06:20 FATAL [158734] dada -1
+2021-05-13 00:06:22 FATAL [158734] dada -1
+2021-05-13 00:12:18 FATAL [162610] dada -1
+2021-05-13 00:12:18 FATAL [162610] 2
+2021-05-13 00:17:19 FATAL [165205] dada -1
+2021-05-13 00:17:19 FATAL [165205] 4
+2021-05-13 00:17:24 FATAL [165205] dada -1
+2021-05-13 00:17:24 FATAL [165205] 2
+2021-05-13 00:17:33 FATAL [165205] dada -1
+2021-05-13 00:17:33 FATAL [165205] 2
+2021-05-13 08:24:34 FATAL [298287] cacat 2
+2021-05-13 17:06:06 ERROR [643700] Caught SecurityException: Authenticity token is empty  [tactioncontroller.cpp:261]
+2021-05-13 17:09:11 ERROR [645592] Caught SecurityException: Authenticity token is empty  [tactioncontroller.cpp:261]
+2021-05-13 17:12:55 ERROR [648107] Caught SecurityException: Authenticity token is empty  [tactioncontroller.cpp:261]
+2021-05-13 17:31:33 ERROR [657065] Dadadada
+2021-05-13 17:31:50 ERROR [657324] Caught SecurityException: Authenticity token is empty  [tactioncontroller.cpp:261]
+2021-05-13 17:33:32 ERROR [658656] Dadadada
+2021-05-13 17:41:37 ERROR [664547] 0x7f914dd0aa30
+2021-05-13 17:41:58 ERROR [665217] 0x700008b0a9c8
+2021-05-13 17:42:02 ERROR [665217] 0x700008b0a9c8
+2021-05-13 17:51:30 ERROR [671218] [{"question":"test","timer":"12","answers":["test","dada","tadsasd","dadada"],"correct":[true,false,false,false],"hint":"tatad","image":null}]
+2021-05-13 20:11:52 ERROR [773391] Unable to redirect. Has rendered already: ShopController#buyItem

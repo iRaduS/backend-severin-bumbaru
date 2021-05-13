@@ -1,0 +1,58 @@
+<div class="columns is-vcentered is-gapless is-paddingless is-marginless">
+  <div class="column is-6 is-fullheight column__fullheight is-flex is-align-content-center is-justify-content-center">
+    <section class="section container">
+      <h1 class="title has-text-centered">CWL</h1>
+      <h2 class="subtitle has-text-centered">Register your account</h2>
+
+      <%== formTag(urla("registration"), Tf::Post) %>
+        <div class="field">
+          <label class="label">Full name</label>
+          <div class="control has-icons-right">
+            <input class="input" name="register[name]" type="text" autocomplete="off">
+            <span class="icon is-small is-right">
+                <i class="fa fa-user-edit"></i>
+              </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Username</label>
+          <div class="control has-icons-right">
+            <input class="input" name="register[username]" type="text" autocomplete="off">
+            <span class="icon is-small is-right">
+                <i class="fa fa-user"></i>
+              </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">E-Mail address</label>
+          <div class="control has-icons-right">
+            <input class="input" name="register[email]" type="email" autocomplete="off">
+            <span class="icon is-small is-right">
+              <i class="fa fa-envelope"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Password</label>
+          <div class="control has-icons-right">
+            <input class="input" name="register[password]" type="password" autocomplete="off">
+            <span class="icon is-small is-right">
+                <i class="fa fa-key"></i>
+              </span>
+          </div>
+        </div>
+
+        <div class="has-text-centered">
+          <button type="submit" class="button is-vcentered is-info is-outlined is-fullwidth">Register</button>
+        </div>
+      </form>
+    </section>
+  </div>
+  <div id="particles-js" class="column is-6 is-fullheight column__fullheight has-background-info">
+    <a class="mx-2 my-2 button is-small is-white is-outlined" href="<%== urla("showLogin") %>">I already have an account, go and login! <i class="fas fa-user"></i></a>
+  </div>
+</div>
+<script src="/js/particles.js" type="application/javascript"></script>

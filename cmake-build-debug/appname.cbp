@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="appname"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\treefrog\;CMake Files\..\..\..\..\usr\local\share\treefrog\cmake\;CMake Files\..\..\..\..\usr\local\opt\;CMake Files\..\..\..\..\usr\local\opt\qt@5\;CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\;CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\;CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5\;CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Network\;CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Xml\;CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Sql\;CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Concurrent\;CMake Files\cmake\;CMake Files\helpers\;CMake Files\models\;CMake Files\views\;CMake Files\controllers\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cmake">
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 cmake"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="helper">
+				<Option output="/Users/raduvrinceanu/Desktop/backend/lib/libhelper.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTF_DLL"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/helper_autogen/include"/>
+					<Add directory="/usr/local/include/treefrog"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/./mkspecs/macx-clang"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/Makefile&quot;  VERBOSE=1 helper"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="helper/fast">
+				<Option output="/Users/raduvrinceanu/Desktop/backend/lib/libhelper.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTF_DLL"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/helper_autogen/include"/>
+					<Add directory="/usr/local/include/treefrog"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/./mkspecs/macx-clang"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/Makefile&quot;  VERBOSE=1 helper/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="helper_autogen">
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/Makefile&quot;  VERBOSE=1 helper_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="model">
+				<Option output="/Users/raduvrinceanu/Desktop/backend/lib/libmodel.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTF_DLL"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add option="-DQT_XML_LIB"/>
+					<Add option="-DQT_SQL_LIB"/>
+					<Add option="-DQT_CONCURRENT_LIB"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/model_autogen/include"/>
+					<Add directory="/usr/local/include/treefrog"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models/sqlobjects"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models/mongoobjects"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/./mkspecs/macx-clang"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtNetwork.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtNetwork.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtXml.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtXml.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtSql.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtSql.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtConcurrent.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtConcurrent.framework/Headers"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/Makefile&quot;  VERBOSE=1 model"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="model/fast">
+				<Option output="/Users/raduvrinceanu/Desktop/backend/lib/libmodel.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTF_DLL"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add option="-DQT_XML_LIB"/>
+					<Add option="-DQT_SQL_LIB"/>
+					<Add option="-DQT_CONCURRENT_LIB"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/model_autogen/include"/>
+					<Add directory="/usr/local/include/treefrog"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models/sqlobjects"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models/mongoobjects"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/./mkspecs/macx-clang"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtNetwork.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtNetwork.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtXml.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtXml.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtSql.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtSql.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtConcurrent.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtConcurrent.framework/Headers"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/Makefile&quot;  VERBOSE=1 model/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="model_autogen">
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/Makefile&quot;  VERBOSE=1 model_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="view">
+				<Option output="/Users/raduvrinceanu/Desktop/backend/lib/libview.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTF_DLL"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add option="-DQT_XML_LIB"/>
+					<Add option="-DQT_SQL_LIB"/>
+					<Add option="-DQT_CONCURRENT_LIB"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/view_autogen/include"/>
+					<Add directory="/usr/local/include/treefrog"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/helpers"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models/sqlobjects"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models/mongoobjects"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/./mkspecs/macx-clang"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtNetwork.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtNetwork.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtXml.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtXml.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtSql.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtSql.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtConcurrent.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtConcurrent.framework/Headers"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 view"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="view/fast">
+				<Option output="/Users/raduvrinceanu/Desktop/backend/lib/libview.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTF_DLL"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add option="-DQT_XML_LIB"/>
+					<Add option="-DQT_SQL_LIB"/>
+					<Add option="-DQT_CONCURRENT_LIB"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/view_autogen/include"/>
+					<Add directory="/usr/local/include/treefrog"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/helpers"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models/sqlobjects"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models/mongoobjects"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/./mkspecs/macx-clang"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtNetwork.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtNetwork.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtXml.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtXml.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtSql.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtSql.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtConcurrent.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtConcurrent.framework/Headers"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 view/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="genview">
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 genview"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="view_autogen">
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 view_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="controller">
+				<Option output="/Users/raduvrinceanu/Desktop/backend/lib/libcontroller.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTF_DLL"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add option="-DQT_XML_LIB"/>
+					<Add option="-DQT_SQL_LIB"/>
+					<Add option="-DQT_CONCURRENT_LIB"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/controller_autogen/include"/>
+					<Add directory="/usr/local/include/treefrog"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/helpers"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models/sqlobjects"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models/mongoobjects"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/./mkspecs/macx-clang"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtNetwork.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtNetwork.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtXml.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtXml.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtSql.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtSql.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtConcurrent.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtConcurrent.framework/Headers"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/Makefile&quot;  VERBOSE=1 controller"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="controller/fast">
+				<Option output="/Users/raduvrinceanu/Desktop/backend/lib/libcontroller.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTF_DLL"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add option="-DQT_XML_LIB"/>
+					<Add option="-DQT_SQL_LIB"/>
+					<Add option="-DQT_CONCURRENT_LIB"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/controller_autogen/include"/>
+					<Add directory="/usr/local/include/treefrog"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/helpers"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models/sqlobjects"/>
+					<Add directory="/Users/raduvrinceanu/Desktop/backend/models/mongoobjects"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtCore.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/./mkspecs/macx-clang"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtNetwork.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtNetwork.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtXml.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtXml.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtSql.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtSql.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtConcurrent.framework"/>
+					<Add directory="/usr/local/opt/qt@5/lib/QtConcurrent.framework/Headers"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/Makefile&quot;  VERBOSE=1 controller/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="controller_autogen">
+				<Option working_dir="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/Makefile&quot;  VERBOSE=1 controller_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/controllers/controller_autogen/mocs_compilation.cpp">
+			<Option target="controller"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/helpers/helper_autogen/mocs_compilation.cpp">
+			<Option target="helper"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/models/model_autogen/mocs_compilation.cpp">
+			<Option target="model"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/cmake-build-debug/views/view_autogen/mocs_compilation.cpp">
+			<Option target="view"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/controllers/applicationcontroller.cpp">
+			<Option target="controller"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/controllers/applicationcontroller.h">
+			<Option target="controller"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/helpers/applicationhelper.cpp">
+			<Option target="helper"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/helpers/applicationhelper.h">
+			<Option target="helper"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/share/treefrog/cmake/TreeFrogConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\share\treefrog\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Xml/Qt5XmlConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Xml\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Xml/Qt5XmlConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Xml\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Sql/Qt5SqlConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Sql/Qt5SqlConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Sql/Qt5Sql_QSQLiteDriverPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Concurrent/Qt5ConcurrentConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Concurrent\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/../../../../usr/local/opt/qt@5/lib/cmake/Qt5Concurrent/Qt5ConcurrentConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt@5\lib\cmake\Qt5Concurrent\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/cmake/TargetCmake.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/helpers/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\helpers\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/models/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\models\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/views/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\views\"/>
+		</Unit>
+		<Unit filename="/Users/raduvrinceanu/Desktop/backend/controllers/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\controllers\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,101 @@
+<%#include "user.h"%>
+<% tfetch(User, user) %>
+<div class="notification is-link">
+  <%=$ notice %>
+</div>
+<div class="container">
+  <div class="is-size-3 text has-font-weight-bold">
+    <strong>SHOP</strong>
+  </div>
+  <p class="credits" style="has-text-right">Credits: <span class="tag is-warning"><%= user.credits() %></span></p>
+  <div class="mt-4 columns is-multiline is-mobile">
+    <div class="column is-one-quarter">
+      <div class="card">
+          <div class="card-content">
+              <div class="content">
+                  <p class="has-text-centered is-size-4">Fire profile icon</p>
+                  <p>
+                    <strong>Description:</strong>
+                    <div class="has-text-centered">
+                      <img src="/images/fire.gif" />
+                    </div>
+                  </p>
+                  <% if (user.isFire()) { %>
+                    <label>
+                      <span class="tag is-success">
+                        owned
+                      </span>
+                    </label>
+                  <% } else { %>
+                    <%== linkTo("Buy - 350 credits", urla("buyItem", 1), Tf::Post, "confirm('Are you sure?')", a("class", "button is-black")) %>
+                  <% } %>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="column is-one-quarter">
+        <div class="card">
+            <div class="card-content">
+                <div class="content">
+                    <p class="has-text-centered is-size-4">Gambit</p>
+                    <p><strong>Description:</strong>
+                        With this power your very first question in your quiz will have only 2
+                    answers possible.</p>
+                    <%== linkTo("Buy - 30 credits", urla("buyItem", 2), Tf::Post, "confirm('Are you sure?')", a("class", "button is-black")) %>
+                    <label>
+                    <% if (user.fiftyFifty()) { %>
+                        <span class="tag is-success">
+                          <%= user.fiftyFifty() %> owned
+                        </span>
+                      <% } %>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-one-quarter">
+        <div class="card">
+            <div class="card-content">
+                <div class="content">
+                    <p class="has-text-centered is-size-4">Riddle</p>
+                    <p><strong>Description:</strong><br>
+                        With this power you can receive a hint from your teacher
+                    based on your question.</p>
+                    <%== linkTo("Buy - 30 credits", urla("buyItem", 3), Tf::Post, "confirm('Are you sure?')", a("class", "button is-black")) %>
+                    <label>
+                      <% if (user.hintGuesser()) { %>
+                        <span class="tag is-success">
+                          <%= user.hintGuesser() %> owned
+                        </span>
+                      <% } %>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-one-quarter">
+      <div class="card">
+          <div class="card-content">
+              <div class="content">
+                  <p class="has-text-centered is-size-4">Elon Musk's profile icon</p>
+                  <p>
+                    <strong>Description:</strong>
+                    <div class="has-text-centered">
+                      <img src="/images/elon.gif" />
+                    </div>
+                  </p>
+                  <% if (user.isElonMusk()) { %>
+                  <label>
+                      <span class="tag is-success">
+                        owned
+                      </span>
+                  </label>
+                  <% } else { %>
+                    <%== linkTo("Buy - 1000 credits", urla("buyItem", 4), Tf::Post, "confirm('Are you sure?')", a("class", "button is-black")) %>
+                  <% } %>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

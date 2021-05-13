@@ -1,0 +1,17 @@
+<%#include "group.h" %>
+<% tfetch(QVariantMap, group); %>
+<div class="notification is-link">
+  <%=$ error %>
+  <%=$ notice %>
+</div>
+
+<h1 class="title">Create a new group</h1>
+<%== formTag(urla("create"), Tf::Post, true, a("class", "box")) %>
+  <div class="field">
+    <label class="label">Group name</label>
+    <div class="control">
+      <input class="input" type="text" name="group[name]" value="<%= group["name"] %>" placeholder="e.g. Elon Musk's groups" />
+    </div>
+  </div>
+  <button class="button is-link">Submit</button>
+</form>

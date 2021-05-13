@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="educational, multi-purpose, real-time">
+  <meta name="description" content="CWL">
+  <title>CWL</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="CWL">
+  <meta property="og:description" content="Educational site with entertaining content.">
+  <meta property="og:image" content="">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="">
+  <meta property="twitter:title" content="CWL">
+  <meta property="twitter:description" content="Educational site with entertaining content.">
+  <meta property="twitter:image" content="">
+
+  <script src="/js/bulma.js" defer></script>
+  <script src="/js/main.js" defer></script>
+
+
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="/css/bulma.min.css" rel="stylesheet">
+  <link href="/css/all.min.css" rel="stylesheet">
+  <link href="/css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <%== renderPartial("navbar") %>
+  <div class="hero is-light is-fullheight">
+    <div class="p-6 m-6">
+      <div class="columns">
+        <div class="column is-2">
+          <aside class="menu is-hidden-mobile">
+            <a class="button is-link is-rounded is-small" href="<%== url("group", "create") %>">
+            <span>Create a new group <i class="fas fa-plus"></i></span>
+            </a>
+            <p class="menu-label">
+              General
+            </p>
+            <ul class="menu-list">
+              <li><a href="<%== url("group", "index") %>">Groups</a></li>
+              <li><a href="<%== url("home", "leaderboard") %>">Leaderboard</a></li>
+              <li><a href="<%== url("shop", "index") %>">Shop</a></li>
+              <li><a href="<%== url("home", "creditLogs") %>">Credit Logs</a></li>
+            </ul>
+          </aside>
+        </div>
+        <div class="column is-10">
+          <%== yield() %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%== renderPartial("footer") %>
+</body>
+</html>

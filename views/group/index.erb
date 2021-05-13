@@ -1,0 +1,48 @@
+<h1 class="title">Enter Group</h1>
+<%== formTag(urla("join"), Tf::Post, true, a("class", "box")) %>
+  <div class="field">
+    <label class="label">Group code</label>
+    <div class="control">
+      <input class="input" type="text" name="invite" placeholder="e.g. dzcadav" />
+    </div>
+  </div>
+  <button class="button is-link" type="submit">Enter code</button>
+</form>
+
+<h1 class="title">Listing Group</h1>
+<div class="box is-flex is-justify-content-center is-align-items-center">
+  <table class="table">
+    <thead>
+      <tr>
+        <th><abbr title="Group name">Group name</abbr></th>
+        <th><abbr title="Users in group">Users in group</abbr></th>
+        <th><abbr title="Role in group">Role in group</abbr></th>
+        <th><abbr title="Options">Options</abbr></th>
+      </tr>
+    </thead>
+    <% tfetch(QList<QVariantMap>, groupList); %>
+    <% for (const auto &i : groupList) { %>
+      <tr>
+        <th><%= i["name"] %></th>
+        <td>
+          <%= i["count"] %>
+        </td>
+        <td>
+          <span class="tag <%= i["role"] == 2 ? "is-warning" : "is-dark" %>">
+            <%= i["role"] == 2 ? "Teacher" : "Student" %>
+          </span>
+        </td>
+        
+        <td>
+          <%== linkTo("Show", urla("show", i["id"]), a("class", "button is-link is-small")) %>
+          <% if (i["role"] == 2) { %>
+          <%== linkTo("Edit", urla("save", i["id"]), a("class", "button is-info is-small")) %>
+          <%== linkTo("Remove", urla("remove", i["id"]), Tf::Post, "confirm('Are you sure?')", a("class", "button is-danger is-small")) %>
+          <% } else { %>
+          <%== linkTo("Leave", urla("leave", i["guid"]), Tf::Post, "confirm('Are you sure?')", a("class", "button is-danger is-small")) %>
+          <% } %>
+        </td>
+      </tr>
+    <% } %>
+  </table>
+</div>

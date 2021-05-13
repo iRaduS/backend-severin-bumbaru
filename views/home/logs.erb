@@ -1,0 +1,19 @@
+<h1 class="title">Credit Logs</h1>
+<% tfetch(QList<QVariantMap>, result); %>
+<div class="container">
+  <% for (int i = 0; i < result.size(); ++i) { %>
+  <div class="mt-3">
+    <div class="card has-text-centered">
+      <div class="card-content">
+        <%= result.at(i)["action"] %>
+        which has a cost of
+        <% if (result.at(i)["credits"].toInt() >= 0) { %>
+          <span class="tag is-success"><%= result.at(i)["credits"].toInt() %> Credits</span>
+        <% } else { %>
+          <span class="tag is-danger"><%= -result.at(i)["credits"].toInt() %> Credits</span>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>

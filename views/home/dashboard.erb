@@ -1,0 +1,55 @@
+<%#include "user.h"%>
+<% tfetch(User, user) %>
+<section class="hero is-link is-small is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        <%= user.name() %>
+        <small class="has-text-light"><%= user.username() %></small>
+        <% if (user.isElonMusk()) { %>
+        <img src="/images/elon.gif" height="32px" />
+        <% } if (user.isFire()) { %>
+        <img src="/images/fire.gif" height="32px" />
+        <% } %>
+      </h1>
+      <h2 class="subtitle"> <cite>Every child borns as a genius</cite> <strong>Albert Einstein</strong></h2>
+    </div>
+  </div>
+</section>
+
+<section class="tiles--info mt-3">
+  <div class="tile is-ancestor has-text-centered">
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title">
+          <% if (user.credits() <= 2800) { %>
+            <span class="tag is-light">Beginner</span>
+          <% } else if (user.credits() <= 6600) { %>
+            <span class="tag is-success">Novice</span>
+          <% } else if (user.credits() <= 10000) { %>
+            <span class="tag is-warning"><i class="fas fa-star"></i> Professional</span>
+          <% } else if (user.credits() <= 13500) { %>
+            <span class="tag is-link"><i class="fas fa-star"></i> Expert</span>
+          <% } else if (user.credits() <= 16600) { %>
+            <span class="tag is-danger"><i class="fas fa-star"></i> Master</span>
+          <% } else if (user.credits() <= 22000) { %>
+            <span class="tag is-black"><i class="fas fa-star"></i> Elite</span>
+          <% } %>
+        </p>
+        <p class="subtitle">Your rank</p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title"><%= user.credits() %></p>
+        <p class="subtitle">Credits</p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title"><%= user.fiftyFifty() + user.hintGuesser() %></p>
+        <p class="subtitle">Products</p>
+      </article>
+    </div>
+  </div>
+</section>

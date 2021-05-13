@@ -1,0 +1,71 @@
+<h1 class="title">Leaderboard</h1>
+<% tfetch(QList<QVariantMap>, result); %>
+<div class="container mt-6 is-fullhd">
+  <div class="box">
+    <div class="columns">
+      <div class="column column--flex is-one-fifth"></div>
+      <div class="column column--flex column-1 is-one-fifth">
+        <div class="icon1 is-large fas fa-trophy"></div>
+      </div>
+      <div class="column column--flex column-2 is-one-fifth">
+        <div class="icon2 is-large fas fa-trophy"></div>
+      </div>
+      <div class="column column--flex column-3 is-one-fifth">
+        <div class="icon3 is-large fas fa-trophy"></div>
+      </div>
+      <div class="column column--flex is-one-fifth"></div>
+    </div>
+    <div class="columns">
+      <div class="column column--flex is-one-fifth"></div>
+      <div class="column column--flex column-1 is-one-fifth has-text-centered">
+        <% if (result.size() >= 2) { %>
+          <div class="mx-1"><%= result.at(1)["name"] %></div>
+          <span class="tag is-warning"><%= result.at(1)["credits"]%></span>
+        <% } else { %>
+          <div>N/A</div>
+        <% } %>
+      </div>
+      <div class="column column--flex column-2 is-one-fifth has-text-centered">
+        <% if (result.size() >= 1) { %>
+          <div class="mx-1"><%= result.at(0)["name"] %></div>
+          <span class="tag is-warning"><%= result.at(0)["credits"]%></span>
+        <% } else { %>
+          <div>N/A</div>
+        <% } %>
+      </div>
+      <div class="column column--flex column-3 is-one-fifth has-text-centered">
+        <% if (result.size() >= 3) { %>
+          <div class="mx-1"><%= result.at(2)["name"] %></div>
+          <span class="tag is-warning"><%= result.at(2)["credits"]%></span>
+        <% } else { %>
+          <div>N/A</div>
+        <% } %>
+      </div>
+      <div class="column column--flex is-one-fifth"></div>
+    </div>
+  </div>
+  <div class="box is-flex is-justify-content-center is-align-items-center">
+    <table class="table">
+      <thead>
+        <tr>
+          <th><abbr title="#">#</abbr></th>
+          <th><abbr title="Username & name">Username & name</abbr></th>
+          <th><abbr title="Credits">Credits</abbr></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (int i = 3; i < result.size(); ++i) { %>
+          <tr>
+            <th><%= i + 1 %></th>
+            <td>
+              <%= result.at(i)["name"] %> <small class="has-text-link"><%= result.at(i)["username"] %></small>
+            </td>
+            <td>
+              <span class="tag is-warning"><%= result.at(i)["credits"]%> Credits</span>
+            </td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>

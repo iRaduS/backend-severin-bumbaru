@@ -1,0 +1,46 @@
+<%#include "user.h"%>
+<nav class="navbar is-info" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="<%== QUrl("/") %>">
+      <span>
+        <i class="has-text-white fas fa-user-edit"></i> <strong class="has-text-white">CWL</strong>
+      </span>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasic" class="navbar-menu">
+    <% if (controller()->isUserLoggedIn() == true) {
+       auto user = User::getByIdentityKey(controller()->identityKeyOfLoginUser());
+    %>
+    <div class="navbar-start">
+      <div class="navbar-item">
+        <a class="button is-outlined is-white is-small" href="<%== url("home", "dashboard") %>">
+          <span>Dashboard, <%== user.name() %> <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <a class="navbar-item" href="<%== url("account", "logout") %>">
+        Logout
+      </a>
+    </div>
+    <% } else { %>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-white is-small" href="<%== url("account", "showRegister") %>">
+            <span><strong>Register</strong> <i class="fas fa-user-plus"></i></span>
+          </a>
+          <a class="button is-outlined is-white is-small" href="<%== url("account", "showLogin") %>">
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</nav>
