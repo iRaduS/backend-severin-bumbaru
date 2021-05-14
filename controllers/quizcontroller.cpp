@@ -3,6 +3,9 @@
 #include "group.h"
 #include "user.h"
 #include "tdebug.h"
+#include "creditlog.h"
+#include "tsqlormapper.h"
+#include "sqlobjects/userobject.h"
 
 void QuizController::remove(const QString &group_id, const QString &id) {
     if (httpRequest().method() != Tf::Delete) {
@@ -38,6 +41,42 @@ void QuizController::show(const QString &group_id, const QString &id) {
     texport(group);
     texport(quizes);
     render("show", "quiz");
+}
+
+void QuizController::user(const QString &id) {
+    if (httpRequest().method() != Tf::Post) {
+        renderErrorResponse(Tf::NotFound);
+        return;
+    }
+
+    QString fifty = httpRequest().formItemValue("fifty");
+    QString hint = httpRequest().formItemValue("hint");
+
+    TSqlORMapper<UserObject> mapper;
+    UserObject user = mapper.findByPrimaryKey(id.toInt());
+    user.fiftyFifty = fifty.toInt();
+    user.hintGuesser = hint.toInt();
+    user.update();
+}
+
+void QuizController::finish(const QString &id) {
+    if (httpRequest().method() != Tf::Post) {
+        renderErrorResponse(Tf::NotFound);
+        return;
+    }
+
+    QString fifty = httpRequest().formItemValue("fifty");
+    QString hint = httpRequest().formItemValue("hint");
+    QString coins = httpRequest().formItemValue("coins");
+
+    TSqlORMapper<UserObject> mapper;
+    UserObject user = mapper.findByPrimaryKey(id.toInt());
+    user.credits = user.credits + coins.toInt();
+    user.fiftyFifty = fifty.toInt();
+    user.hintGuesser = hint.toInt();
+    user.update();
+
+    CreditLog::create(id.toInt(), coins.toInt(), "Finished a quiz");
 }
 
 void QuizController::create(const QString &id) {

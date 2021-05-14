@@ -2678,26 +2678,51 @@ var Quiz = function Quiz(_ref) {
       }
     }
   }, [seconds]);
-  react__WEBPACK_IMPORTED_MODULE_2__.useEffect( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            if (!finish) {
-              _context.next = 3;
-              break;
-            }
+  react__WEBPACK_IMPORTED_MODULE_2__.useEffect(function () {
+    _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      var userForm;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              userForm = new FormData();
+              userForm.append('fifty', fifty);
+              userForm.append('hint', hint);
+              _context.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/quiz/user/".concat(props.user), userForm);
 
-            _context.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/quiz/finish/".concat(props.user));
-
-          case 3:
-          case "end":
-            return _context.stop();
+            case 5:
+            case "end":
+              return _context.stop();
+          }
         }
-      }
-    }, _callee);
-  })), [finish]);
+      }, _callee);
+    }))();
+  }, [fifty, hint]);
+  react__WEBPACK_IMPORTED_MODULE_2__.useEffect(function () {
+    if (finish) {
+      _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        var creditForm;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                creditForm = new FormData();
+                creditForm.append('coins', credits);
+                creditForm.append('fifty', fifty);
+                creditForm.append('hint', hint);
+                _context2.next = 6;
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/quiz/finish/".concat(props.user), creditForm);
+
+              case 6:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    }
+  }, [finish]);
   react__WEBPACK_IMPORTED_MODULE_2__.useEffect(function () {
     setSeconds(JSON.parse(props.quiz).details[current].timer);
     setProgress(0);
@@ -2719,166 +2744,18 @@ var Quiz = function Quiz(_ref) {
   };
 
   var handleHintChange = /*#__PURE__*/function () {
-    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-      var userForm;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              setHint(hint - 1);
-              setShowHint(true);
-              setShowBHint(false);
-              userForm = new FormData();
-              userForm.append('fifty', fifty);
-              userForm.append('hint', hint);
-              _context2.next = 8;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/quiz/user/".concat(props.user), userForm);
-
-            case 8:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2);
-    }));
-
-    return function handleHintChange() {
-      return _ref3.apply(this, arguments);
-    };
-  }();
-
-  var handleGambitChange = /*#__PURE__*/function () {
     var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
-      var auxAnswers, chances, userForm;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              setFifty(fifty - 1);
-              setShowBGambit(false);
-              auxAnswers = _toConsumableArray(answers);
-              chances = Math.floor(Math.random() * 3);
-
-              if (!JSON.parse(props.quiz).details[current].correct[0]) {
-                _context3.next = 19;
-                break;
+              if (hint) {
+                setHint(hint - 1);
+                setShowHint(true);
+                setShowBHint(false);
               }
 
-              _context3.t0 = chances;
-              _context3.next = _context3.t0 === 0 ? 8 : _context3.t0 === 1 ? 11 : _context3.t0 === 2 ? 14 : 17;
-              break;
-
-            case 8:
-              auxAnswers[1] = false;
-              auxAnswers[2] = false;
-              return _context3.abrupt("break", 17);
-
-            case 11:
-              auxAnswers[1] = false;
-              auxAnswers[3] = false;
-              return _context3.abrupt("break", 17);
-
-            case 14:
-              auxAnswers[3] = false;
-              auxAnswers[2] = false;
-              return _context3.abrupt("break", 17);
-
-            case 17:
-              _context3.next = 62;
-              break;
-
-            case 19:
-              if (!JSON.parse(props.quiz).details[current].correct[1]) {
-                _context3.next = 34;
-                break;
-              }
-
-              _context3.t1 = chances;
-              _context3.next = _context3.t1 === 0 ? 23 : _context3.t1 === 1 ? 26 : _context3.t1 === 2 ? 29 : 32;
-              break;
-
-            case 23:
-              auxAnswers[0] = false;
-              auxAnswers[2] = false;
-              return _context3.abrupt("break", 32);
-
-            case 26:
-              auxAnswers[0] = false;
-              auxAnswers[3] = false;
-              return _context3.abrupt("break", 32);
-
-            case 29:
-              auxAnswers[3] = false;
-              auxAnswers[2] = false;
-              return _context3.abrupt("break", 32);
-
-            case 32:
-              _context3.next = 62;
-              break;
-
-            case 34:
-              if (!JSON.parse(props.quiz).details[current].correct[2]) {
-                _context3.next = 49;
-                break;
-              }
-
-              _context3.t2 = chances;
-              _context3.next = _context3.t2 === 0 ? 38 : _context3.t2 === 1 ? 41 : _context3.t2 === 2 ? 44 : 47;
-              break;
-
-            case 38:
-              auxAnswers[0] = false;
-              auxAnswers[1] = false;
-              return _context3.abrupt("break", 47);
-
-            case 41:
-              auxAnswers[0] = false;
-              auxAnswers[3] = false;
-              return _context3.abrupt("break", 47);
-
-            case 44:
-              auxAnswers[3] = false;
-              auxAnswers[1] = false;
-              return _context3.abrupt("break", 47);
-
-            case 47:
-              _context3.next = 62;
-              break;
-
-            case 49:
-              if (!JSON.parse(props.quiz).details[current].correct[3]) {
-                _context3.next = 62;
-                break;
-              }
-
-              _context3.t3 = chances;
-              _context3.next = _context3.t3 === 0 ? 53 : _context3.t3 === 1 ? 56 : _context3.t3 === 2 ? 59 : 62;
-              break;
-
-            case 53:
-              auxAnswers[0] = false;
-              auxAnswers[1] = false;
-              return _context3.abrupt("break", 62);
-
-            case 56:
-              auxAnswers[0] = false;
-              auxAnswers[2] = false;
-              return _context3.abrupt("break", 62);
-
-            case 59:
-              auxAnswers[2] = false;
-              auxAnswers[1] = false;
-              return _context3.abrupt("break", 62);
-
-            case 62:
-              setAnswers(auxAnswers);
-              userForm = new FormData();
-              userForm.append('fifty', fifty);
-              userForm.append('hint', hint);
-              _context3.next = 68;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/quiz/user/".concat(props.user), userForm);
-
-            case 68:
+            case 1:
             case "end":
               return _context3.stop();
           }
@@ -2886,8 +2763,152 @@ var Quiz = function Quiz(_ref) {
       }, _callee3);
     }));
 
-    return function handleGambitChange() {
+    return function handleHintChange() {
       return _ref4.apply(this, arguments);
+    };
+  }();
+
+  var handleGambitChange = /*#__PURE__*/function () {
+    var _ref5 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4() {
+      var auxAnswers, chances;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              if (!fifty) {
+                _context4.next = 64;
+                break;
+              }
+
+              setFifty(fifty - 1);
+              setShowBGambit(false);
+              auxAnswers = _toConsumableArray(answers);
+              chances = Math.floor(Math.random() * 3);
+
+              if (!JSON.parse(props.quiz).details[current].correct[0]) {
+                _context4.next = 20;
+                break;
+              }
+
+              _context4.t0 = chances;
+              _context4.next = _context4.t0 === 0 ? 9 : _context4.t0 === 1 ? 12 : _context4.t0 === 2 ? 15 : 18;
+              break;
+
+            case 9:
+              auxAnswers[1] = false;
+              auxAnswers[2] = false;
+              return _context4.abrupt("break", 18);
+
+            case 12:
+              auxAnswers[1] = false;
+              auxAnswers[3] = false;
+              return _context4.abrupt("break", 18);
+
+            case 15:
+              auxAnswers[3] = false;
+              auxAnswers[2] = false;
+              return _context4.abrupt("break", 18);
+
+            case 18:
+              _context4.next = 63;
+              break;
+
+            case 20:
+              if (!JSON.parse(props.quiz).details[current].correct[1]) {
+                _context4.next = 35;
+                break;
+              }
+
+              _context4.t1 = chances;
+              _context4.next = _context4.t1 === 0 ? 24 : _context4.t1 === 1 ? 27 : _context4.t1 === 2 ? 30 : 33;
+              break;
+
+            case 24:
+              auxAnswers[0] = false;
+              auxAnswers[2] = false;
+              return _context4.abrupt("break", 33);
+
+            case 27:
+              auxAnswers[0] = false;
+              auxAnswers[3] = false;
+              return _context4.abrupt("break", 33);
+
+            case 30:
+              auxAnswers[3] = false;
+              auxAnswers[2] = false;
+              return _context4.abrupt("break", 33);
+
+            case 33:
+              _context4.next = 63;
+              break;
+
+            case 35:
+              if (!JSON.parse(props.quiz).details[current].correct[2]) {
+                _context4.next = 50;
+                break;
+              }
+
+              _context4.t2 = chances;
+              _context4.next = _context4.t2 === 0 ? 39 : _context4.t2 === 1 ? 42 : _context4.t2 === 2 ? 45 : 48;
+              break;
+
+            case 39:
+              auxAnswers[0] = false;
+              auxAnswers[1] = false;
+              return _context4.abrupt("break", 48);
+
+            case 42:
+              auxAnswers[0] = false;
+              auxAnswers[3] = false;
+              return _context4.abrupt("break", 48);
+
+            case 45:
+              auxAnswers[3] = false;
+              auxAnswers[1] = false;
+              return _context4.abrupt("break", 48);
+
+            case 48:
+              _context4.next = 63;
+              break;
+
+            case 50:
+              if (!JSON.parse(props.quiz).details[current].correct[3]) {
+                _context4.next = 63;
+                break;
+              }
+
+              _context4.t3 = chances;
+              _context4.next = _context4.t3 === 0 ? 54 : _context4.t3 === 1 ? 57 : _context4.t3 === 2 ? 60 : 63;
+              break;
+
+            case 54:
+              auxAnswers[0] = false;
+              auxAnswers[1] = false;
+              return _context4.abrupt("break", 63);
+
+            case 57:
+              auxAnswers[0] = false;
+              auxAnswers[2] = false;
+              return _context4.abrupt("break", 63);
+
+            case 60:
+              auxAnswers[2] = false;
+              auxAnswers[1] = false;
+              return _context4.abrupt("break", 63);
+
+            case 63:
+              setAnswers(auxAnswers);
+
+            case 64:
+            case "end":
+              return _context4.stop();
+          }
+        }
+      }, _callee4);
+    }));
+
+    return function handleGambitChange() {
+      return _ref5.apply(this, arguments);
     };
   }();
 

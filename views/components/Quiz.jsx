@@ -42,9 +42,24 @@ const Quiz = ({...props}) => {
     }
   }, [seconds])
 
-  React.useEffect(async () => {
+  React.useEffect(() => {
+    (async () => {
+      let userForm = new FormData();
+      userForm.append('fifty', fifty)
+      userForm.append('hint', hint)
+      await axios.post(`/quiz/user/${props.user}`, userForm)
+    })();
+  }, [fifty, hint]);
+
+  React.useEffect(() => {
     if (finish) {
-      await axios.post(`/quiz/finish/${props.user}`)
+      (async () => {
+        let creditForm = new FormData();
+        creditForm.append('coins', credits)
+        creditForm.append('fifty', fifty)
+        creditForm.append('hint', hint)
+        await axios.post(`/quiz/finish/${props.user}`, creditForm)
+      })();
     }
   }, [finish])
 
@@ -69,53 +84,47 @@ const Quiz = ({...props}) => {
     setSeconds(-1);
   }
   const handleHintChange = async () => {
-    setHint(hint - 1);
-    setShowHint(true);
-    setShowBHint(false);
-
-    let userForm = new FormData();
-    userForm.append('fifty', fifty)
-    userForm.append('hint', hint)
-    await axios.post(`/quiz/user/${props.user}`, userForm)
+    if (hint) {
+      setHint(hint - 1);
+      setShowHint(true);
+      setShowBHint(false);
+    }
   }
 
   const handleGambitChange = async () => {
-    setFifty(fifty - 1);
-    setShowBGambit(false);
+    if (fifty) {
+      setFifty(fifty - 1);
+      setShowBGambit(false);
 
-    const auxAnswers = [...answers];
-    const chances = Math.floor(Math.random() * 3);
-    if (JSON.parse(props.quiz).details[current].correct[0]) {
-      switch (chances) {
-        case 0: auxAnswers[1] = false; auxAnswers[2] = false; break;
-        case 1: auxAnswers[1] = false; auxAnswers[3] = false; break;
-        case 2: auxAnswers[3] = false; auxAnswers[2] = false; break;
+      const auxAnswers = [...answers];
+      const chances = Math.floor(Math.random() * 3);
+      if (JSON.parse(props.quiz).details[current].correct[0]) {
+        switch (chances) {
+          case 0: auxAnswers[1] = false; auxAnswers[2] = false; break;
+          case 1: auxAnswers[1] = false; auxAnswers[3] = false; break;
+          case 2: auxAnswers[3] = false; auxAnswers[2] = false; break;
+        }
+      } else if (JSON.parse(props.quiz).details[current].correct[1]) {
+        switch (chances) {
+          case 0: auxAnswers[0] = false; auxAnswers[2] = false; break;
+          case 1: auxAnswers[0] = false; auxAnswers[3] = false; break;
+          case 2: auxAnswers[3] = false; auxAnswers[2] = false; break;
+        }
+      } else if (JSON.parse(props.quiz).details[current].correct[2]) {
+        switch (chances) {
+          case 0: auxAnswers[0] = false; auxAnswers[1] = false; break;
+          case 1: auxAnswers[0] = false; auxAnswers[3] = false; break;
+          case 2: auxAnswers[3] = false; auxAnswers[1] = false; break;
+        }
+      } else if (JSON.parse(props.quiz).details[current].correct[3]) {
+        switch (chances) {
+          case 0: auxAnswers[0] = false; auxAnswers[1] = false; break;
+          case 1: auxAnswers[0] = false; auxAnswers[2] = false; break;
+          case 2: auxAnswers[2] = false; auxAnswers[1] = false; break;
+        }
       }
-    } else if (JSON.parse(props.quiz).details[current].correct[1]) {
-      switch (chances) {
-        case 0: auxAnswers[0] = false; auxAnswers[2] = false; break;
-        case 1: auxAnswers[0] = false; auxAnswers[3] = false; break;
-        case 2: auxAnswers[3] = false; auxAnswers[2] = false; break;
-      }
-    } else if (JSON.parse(props.quiz).details[current].correct[2]) {
-      switch (chances) {
-        case 0: auxAnswers[0] = false; auxAnswers[1] = false; break;
-        case 1: auxAnswers[0] = false; auxAnswers[3] = false; break;
-        case 2: auxAnswers[3] = false; auxAnswers[1] = false; break;
-      }
-    } else if (JSON.parse(props.quiz).details[current].correct[3]) {
-      switch (chances) {
-        case 0: auxAnswers[0] = false; auxAnswers[1] = false; break;
-        case 1: auxAnswers[0] = false; auxAnswers[2] = false; break;
-        case 2: auxAnswers[2] = false; auxAnswers[1] = false; break;
-      }
+      setAnswers(auxAnswers);
     }
-    setAnswers(auxAnswers);
-
-    let userForm = new FormData();
-    userForm.append('fifty', fifty)
-    userForm.append('hint', hint)
-    await axios.post(`/quiz/user/${props.user}`, userForm)
   }
 
   return (
