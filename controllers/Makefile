@@ -4012,6 +4012,7 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tabstractuser.h \
 		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TAbstractModel \
 		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tabstractmodel.h \
+		../models/creditlog.h \
 		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsqlormapper.h \
 		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsystemglobal.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtCore.framework/Headers/QSettings \

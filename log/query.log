@@ -13827,3 +13827,174 @@
 2021-05-14 05:39:19  [1131507] SELECT "id","name","invite","user_id" FROM "groups" t0 WHERE t0."id"=4 LIMIT 1
 2021-05-14 05:39:19  [1131507] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
 2021-05-14 05:39:19  [1131507] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:40:29  [1132670] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:40:29  [1132670] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:40:29  [1132670] SELECT "id","user_id","credits","action" FROM "credit_log" t0 WHERE t0."user_id"=1 ORDER BY t0."id" DESC
+2021-05-14 05:40:29  [1132670] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:40:29  [1132670] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:40:40  [1132895] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:40:40  [1132895] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:40:40  [1132895] SELECT "id","user_id","credits","action" FROM "credit_log" t0 WHERE t0."user_id"=1 ORDER BY t0."id" DESC
+2021-05-14 05:40:40  [1132895] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:40:40  [1132895] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:40:42  [1132895] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:40:42  [1132895] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:40:42  [1132895] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:40:42  [1132895] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:46:53  [1137249] PRAGMA journal_mode=WAL
+2021-05-14 05:46:53  [1137249] PRAGMA foreign_keys=ON
+2021-05-14 05:46:53  [1137249] PRAGMA busy_timeout=5000
+2021-05-14 05:46:53  [1137249] PRAGMA synchronous=NORMAL
+2021-05-14 05:46:53  [1137249] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:46:53  [1137249] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:46:53  [1137249] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:46:53  [1137249] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:46:57  [1137249] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:46:57  [1137249] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:46:57  [1137249] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."id"=1 LIMIT 1
+2021-05-14 05:46:57  [1137249] UPDATE user SET credits=8499,hintGuesser=5 WHERE id=1
+2021-05-14 05:46:57  [1137249] INSERT INTO "credit_log" ("user_id", "credits", "action") VALUES (1, -30, 'purchased an item from the shop')
+2021-05-14 05:46:57  [1137249] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:46:57  [1137249] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:46:57  [1137249] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:46:57  [1137249] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:46:57  [1137249] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:46:58  [1137249] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:46:58  [1137249] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:46:58  [1137249] SELECT "id","user_id","credits","action" FROM "credit_log" t0 WHERE t0."user_id"=1 ORDER BY t0."id" DESC
+2021-05-14 05:46:58  [1137249] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:46:58  [1137249] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:48:38  [1138411] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:48:38  [1138411] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:48:38  [1138411] SELECT "id","user_id","credits","action" FROM "credit_log" t0 WHERE t0."user_id"=1 ORDER BY t0."id" DESC
+2021-05-14 05:48:38  [1138411] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:48:38  [1138411] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:48:39  [1138411] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:48:39  [1138411] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:48:39  [1138411] SELECT "id","user_id","credits","action" FROM "credit_log" t0 WHERE t0."user_id"=1 ORDER BY t0."id" DESC
+2021-05-14 05:48:39  [1138411] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:48:39  [1138411] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:37  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:37  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:37  [1139644] SELECT "id","user_id","credits","action" FROM "credit_log" t0 WHERE t0."user_id"=1 ORDER BY t0."id" DESC
+2021-05-14 05:50:37  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:37  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:37  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:37  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:37  [1139644] SELECT "id","user_id","credits","action" FROM "credit_log" t0 WHERE t0."user_id"=1 ORDER BY t0."id" DESC
+2021-05-14 05:50:37  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:37  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:37  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:37  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:37  [1139644] SELECT "id","user_id","credits","action" FROM "credit_log" t0 WHERE t0."user_id"=1 ORDER BY t0."id" DESC
+2021-05-14 05:50:37  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:37  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:37  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:37  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:37  [1139644] SELECT "id","user_id","credits","action" FROM "credit_log" t0 WHERE t0."user_id"=1 ORDER BY t0."id" DESC
+2021-05-14 05:50:37  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:37  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:38  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:38  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:38  [1139644] SELECT "id","user_id","credits","action" FROM "credit_log" t0 WHERE t0."user_id"=1 ORDER BY t0."id" DESC
+2021-05-14 05:50:38  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:38  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:38  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:38  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:38  [1139644] SELECT "id","user_id","credits","action" FROM "credit_log" t0 WHERE t0."user_id"=1 ORDER BY t0."id" DESC
+2021-05-14 05:50:38  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:38  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:40  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:40  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 ORDER BY t0."credits" DESC
+2021-05-14 05:50:40  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:40  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:42  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:42  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:42  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:42  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:43  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:43  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:43  [1139644] SELECT "id","user_id","credits","action" FROM "credit_log" t0 WHERE t0."user_id"=1 ORDER BY t0."id" DESC
+2021-05-14 05:50:43  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:43  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:44  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:44  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:44  [1139644] SELECT g.id, g.name, COUNT(gu.user_id), gu.role, gu.id FROM group_user gu LEFT JOIN groups g ON g.id = gu.group_id WHERE gu.user_id = :id GROUP BY g.id ORDER BY gu.role DESC
+2021-05-14 05:50:44  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:44  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:45  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:45  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:45  [1139644] SELECT g.id, g.name, COUNT(gu.user_id), gu.role, gu.id FROM group_user gu LEFT JOIN groups g ON g.id = gu.group_id WHERE gu.user_id = :id GROUP BY g.id ORDER BY gu.role DESC
+2021-05-14 05:50:45  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:45  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:45  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:45  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:45  [1139644] SELECT g.id, g.name, COUNT(gu.user_id), gu.role, gu.id FROM group_user gu LEFT JOIN groups g ON g.id = gu.group_id WHERE gu.user_id = :id GROUP BY g.id ORDER BY gu.role DESC
+2021-05-14 05:50:45  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:45  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:45  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:45  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:45  [1139644] SELECT g.id, g.name, COUNT(gu.user_id), gu.role, gu.id FROM group_user gu LEFT JOIN groups g ON g.id = gu.group_id WHERE gu.user_id = :id GROUP BY g.id ORDER BY gu.role DESC
+2021-05-14 05:50:45  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:45  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:45  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:45  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:45  [1139644] SELECT g.id, g.name, COUNT(gu.user_id), gu.role, gu.id FROM group_user gu LEFT JOIN groups g ON g.id = gu.group_id WHERE gu.user_id = :id GROUP BY g.id ORDER BY gu.role DESC
+2021-05-14 05:50:45  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:45  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:49  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:49  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:49  [1139644] SELECT "id","user_id","group_id","role" FROM "group_user" t0 WHERE t0."group_id"=4 AND t0."user_id"=1 LIMIT 1
+2021-05-14 05:50:49  [1139644] SELECT "id","name","details","group_id" FROM "quiz" t0 WHERE t0."group_id"=4
+2021-05-14 05:50:49  [1139644] SELECT "id","name","invite","user_id" FROM "groups" t0 WHERE t0."id"=4 LIMIT 1
+2021-05-14 05:50:49  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:49  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:53  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:53  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:53  [1139644] SELECT "id","name","invite","user_id" FROM "groups" t0 WHERE t0."id"=4 LIMIT 1
+2021-05-14 05:50:53  [1139644] SELECT "id","name","details","group_id" FROM "quiz" t0 WHERE t0."id"=1 LIMIT 1
+2021-05-14 05:50:53  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:50:56  [1139644] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:50:56  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:56  [1139644] SELECT "id","user_id","group_id","role" FROM "group_user" t0 WHERE t0."group_id"=4 AND t0."user_id"=1 LIMIT 1
+2021-05-14 05:50:56  [1139644] SELECT "id","name","details","group_id" FROM "quiz" t0 WHERE t0."group_id"=4
+2021-05-14 05:50:56  [1139644] SELECT "id","name","invite","user_id" FROM "groups" t0 WHERE t0."id"=4 LIMIT 1
+2021-05-14 05:50:56  [1139644] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:50:56  [1139644] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:54:14  [1141218] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:54:14  [1141218] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:54:14  [1141218] SELECT "id","user_id","group_id","role" FROM "group_user" t0 WHERE t0."group_id"=4 AND t0."user_id"=1 LIMIT 1
+2021-05-14 05:54:14  [1141218] SELECT "id","name","details","group_id" FROM "quiz" t0 WHERE t0."group_id"=4
+2021-05-14 05:54:14  [1141218] SELECT "id","name","invite","user_id" FROM "groups" t0 WHERE t0."id"=4 LIMIT 1
+2021-05-14 05:54:14  [1141218] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:54:14  [1141218] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:54:14  [1141218] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:54:14  [1141218] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:54:14  [1141218] SELECT "id","user_id","group_id","role" FROM "group_user" t0 WHERE t0."group_id"=4 AND t0."user_id"=1 LIMIT 1
+2021-05-14 05:54:14  [1141218] SELECT "id","name","details","group_id" FROM "quiz" t0 WHERE t0."group_id"=4
+2021-05-14 05:54:14  [1141218] SELECT "id","name","invite","user_id" FROM "groups" t0 WHERE t0."id"=4 LIMIT 1
+2021-05-14 05:54:14  [1141218] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:54:14  [1141218] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:54:56  [1141710] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:54:56  [1141710] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='Serj' LIMIT 1
+2021-05-14 05:54:56  [1141710] SELECT g.id, g.name, COUNT(gu.user_id), gu.role, gu.id FROM group_user gu LEFT JOIN groups g ON g.id = gu.group_id WHERE gu.user_id = :id GROUP BY g.id ORDER BY gu.role DESC
+2021-05-14 05:54:56  [1141710] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='Serj' LIMIT 1
+2021-05-14 05:54:56  [1141710] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:54:59  [1141747] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:54:59  [1141747] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:54:59  [1141747] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:55:43  [1142138] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:55:43  [1142138] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:55:43  [1142138] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:55:45  [1142138] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:55:45  [1142138] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:55:45  [1142138] SELECT g.id, g.name, COUNT(gu.user_id), gu.role, gu.id FROM group_user gu LEFT JOIN groups g ON g.id = gu.group_id WHERE gu.user_id = :id GROUP BY g.id ORDER BY gu.role DESC
+2021-05-14 05:55:45  [1142138] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:55:45  [1142138] [COMMIT] [databaseId:0] rdb00_127
+2021-05-14 05:55:48  [1142138] [BEGIN] [databaseId:0] rdb00_127
+2021-05-14 05:55:48  [1142138] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:55:48  [1142138] SELECT "id","user_id","group_id","role" FROM "group_user" t0 WHERE t0."group_id"=4 AND t0."user_id"=1 LIMIT 1
+2021-05-14 05:55:48  [1142138] SELECT "id","name","details","group_id" FROM "quiz" t0 WHERE t0."group_id"=4
+2021-05-14 05:55:48  [1142138] SELECT "id","name","invite","user_id" FROM "groups" t0 WHERE t0."id"=4 LIMIT 1
+2021-05-14 05:55:48  [1142138] SELECT "id","username","password","email","name","credits","isElonMusk","isTesla","isHeart","isFire","fiftyFifty","hintGuesser" FROM "user" t0 WHERE t0."username"='iRaduS' LIMIT 1
+2021-05-14 05:55:48  [1142138] [COMMIT] [databaseId:0] rdb00_127

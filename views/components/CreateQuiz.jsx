@@ -91,8 +91,8 @@ const QuizCreate = ({...props}) => {
     }
   }
   const changeStateButton = (param) => {
-    let auxCorrect = [...correct]
-    auxCorrect[param] = !auxCorrect[param]
+    let auxCorrect = [false, false, false, false];
+    auxCorrect[param] = true
 
     setCorrect(auxCorrect)
   }

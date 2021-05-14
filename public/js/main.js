@@ -2051,9 +2051,8 @@ var QuizCreate = function QuizCreate(_ref) {
   };
 
   var changeStateButton = function changeStateButton(param) {
-    var auxCorrect = _toConsumableArray(correct);
-
-    auxCorrect[param] = !auxCorrect[param];
+    var auxCorrect = [false, false, false, false];
+    auxCorrect[param] = true;
     setCorrect(auxCorrect);
   };
 

@@ -14,7 +14,7 @@ public:
 
 QString quiz_showView::toString()
 {
-  responsebody.reserve(356);
+  responsebody.reserve(461);
     tfetch(Group, group);
   tfetch(int, userId);
   tfetch(QString, quizes);
@@ -22,6 +22,8 @@ QString quiz_showView::toString()
   responsebody += THttpUtility::htmlEscape(quizes);
   responsebody += QStringLiteral("\" data-groupid=\"");
   responsebody += THttpUtility::htmlEscape(group.id());
+  responsebody += QStringLiteral("\" data-user=\"");
+  responsebody += THttpUtility::htmlEscape(userId);
   responsebody += QStringLiteral("\"></div>");
 
   return responsebody;

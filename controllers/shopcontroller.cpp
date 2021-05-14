@@ -1,5 +1,6 @@
 #include "shopcontroller.h"
 #include "user.h"
+#include "creditlog.h"
 #include "tsqlormapper.h"
 #include "sqlobjects/userobject.h"
 
@@ -40,6 +41,7 @@ void ShopController::buyItem(const QString &id) {
         }
     }
     usr_obj.update();
+    CreditLog::create(user.id(), -prices[id.toInt() - 1], "Purchased an item from the shop");
 
     redirect(urla("index"));
 }
