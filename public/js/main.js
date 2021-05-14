@@ -2657,9 +2657,6 @@ var Quiz = function Quiz(_ref) {
 
   var timer;
   react__WEBPACK_IMPORTED_MODULE_2__.useEffect(function () {
-    console.log(JSON.parse(props.quiz));
-  }, []);
-  react__WEBPACK_IMPORTED_MODULE_2__.useEffect(function () {
     if (seconds > 0 && seconds != null) {
       timer = setTimeout(function () {
         setProgress(progress + 100 / JSON.parse(props.quiz).details[current].timer);

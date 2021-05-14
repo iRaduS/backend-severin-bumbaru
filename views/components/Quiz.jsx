@@ -20,10 +20,6 @@ const Quiz = ({...props}) => {
   let timer;
 
   React.useEffect(() => {
-    console.log(JSON.parse(props.quiz));
-  }, [])
-
-  React.useEffect(() => {
     if (seconds > 0 && seconds != null) {
       timer = setTimeout(() => {
         setProgress(progress + 100 / JSON.parse(props.quiz).details[current].timer)
