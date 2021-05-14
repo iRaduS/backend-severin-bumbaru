@@ -1,0 +1,28 @@
+.container {
+    margin-top: 70px;
+}
+.message-body, .message-header {
+    display: flex;
+    justify-content: center;
+}
+.message-header {
+    background-color: #88ecbd;
+    height: 55px;
+    font-size: 30px;
+}
+.progress {
+    margin: 10px auto;
+    width: 600px;
+}
+
+
+.button--custom {
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}

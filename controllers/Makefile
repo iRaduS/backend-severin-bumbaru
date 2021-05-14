@@ -3451,23 +3451,47 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TAbstractUser \
 		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tabstractuser.h \
 		../models/groupuser.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tcriteria.h \
+		../models/quiz.h \
+		../models/sqlobjects/quizobject.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TSqlObject \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsqlobject.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtCore.framework/Headers/QObject \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/QSqlError \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlerror.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/QSqlRecord \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtCore.framework/Headers/QVariantMap \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TModelObject \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tmodelobject.h \
+		../models/sqlobjects/groupuserobject.h \
 		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsqlquery.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/QtSql \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qtsqlglobal.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqldatabase.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqldriver.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqldriverplugin.h \
-		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlerror.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlfield.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlindex.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlquery.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlquerymodel.h \
-		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlrecord.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlresult.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqltablemodel.h \
-		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qtsqlversion.h
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsqlormapper.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsystemglobal.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtCore.framework/Headers/QSettings \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TCriteria \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TCriteriaConverter \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tcriteriaconverter.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtCore.framework/Headers/QMetaObject \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TSqlQuery \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TSqlJoin \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsqljoin.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsqlormapperiterator.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TSqlORMapper
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/groupcontroller.o groupcontroller.cpp
 
 .obj/quizcontroller.o: quizcontroller.cpp quizcontroller.h \
@@ -3724,7 +3748,11 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 		../models/quiz.h \
 		/usr/local/Cellar/qt@5/5.15.2/lib/QtCore.framework/Headers/QSharedDataPointer \
 		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TAbstractModel \
-		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tabstractmodel.h
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tabstractmodel.h \
+		../models/group.h \
+		../models/user.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TAbstractUser \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tabstractuser.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/quizcontroller.o quizcontroller.cpp
 
 .obj/shopcontroller.o: shopcontroller.cpp shopcontroller.h \
@@ -3983,7 +4011,44 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TAbstractUser \
 		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tabstractuser.h \
 		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TAbstractModel \
-		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tabstractmodel.h
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tabstractmodel.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsqlormapper.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsystemglobal.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtCore.framework/Headers/QSettings \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/QtSql \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qtsqlglobal.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqldatabase.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqldriver.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlerror.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlfield.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlindex.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlquery.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlrecord.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqlresult.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/qtsqlversion.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TCriteria \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tcriteria.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TCriteriaConverter \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tcriteriaconverter.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtCore.framework/Headers/QMetaObject \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TSqlQuery \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsqlquery.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TSqlJoin \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsqljoin.h \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TSqlObject \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tsqlobject.h \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtCore.framework/Headers/QObject \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/QSqlError \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtSql.framework/Headers/QSqlRecord \
+		/usr/local/Cellar/qt@5/5.15.2/lib/QtCore.framework/Headers/QVariantMap \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/TModelObject \
+		/usr/local/Cellar/treefrog/1.31.1/include/treefrog/tmodelobject.h \
+		../models/sqlobjects/userobject.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/shopcontroller.o shopcontroller.cpp
 
 .obj/moc_applicationcontroller.o: .obj/moc_applicationcontroller.cpp 

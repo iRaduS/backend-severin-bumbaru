@@ -2,8 +2,29 @@
 #include "group.h"
 #include "user.h"
 #include "groupuser.h"
+#include "tcriteria.h"
+#include "quiz.h"
+#include "sqlobjects/quizobject.h"
+#include "sqlobjects/groupuserobject.h"
 #include <tsqlquery.h>
+#include "tsqlormapper.h"
+#include "tsqlormapperiterator.h"
+#include "tdebug.h"
 
+QString GetRandomString()
+{
+   const QString possibleCharacters("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz");
+   const int randomStringLength = 12; // assuming you want random strings of 12 characters
+
+   QString randomString;
+   for(int i=0; i<randomStringLength; ++i)
+   {
+       int index = qrand() % possibleCharacters.length();
+       QChar nextChar = possibleCharacters.at(index);
+       randomString.append(nextChar);
+   }
+   return randomString;
+}
 
 void GroupController::index()
 {
@@ -75,7 +96,37 @@ void GroupController::join() {
 
 void GroupController::show(const QString &id)
 {
+    int userId = User::getByIdentityKey(this->identityKeyOfLoginUser()).id();
+
+    TCriteria groupcrt(GroupUserObject::GroupId, id.toInt());
+    TSqlORMapper<GroupUserObject> groupmapper;
+    groupcrt.add(GroupUserObject::UserId, userId);
+    GroupUserObject result = groupmapper.findFirst(groupcrt);
+    auto view = GroupUser(result);
+
+    TCriteria crt(QuizObject::GroupId, id.toInt());
+    TSqlORMapper<QuizObject> mapper;
+    mapper.find(crt);
+    
+    QString quizes;
+    quizes += "[";
+    for (TSqlORMapperIterator<QuizObject> i(mapper); i.hasNext(); ) {
+        auto quiz = Quiz(i.next());
+        quizes += "{\"id\": \"";
+        quizes += QString::number(quiz.id()); 
+        quizes += "\", \"name\": \"";
+        quizes += quiz.name(); 
+        quizes += "\", \"details\":";
+        quizes += quiz.details(); 
+        quizes += "}";
+
+        if (i.hasNext()) quizes += ", ";
+    }
+    quizes += "]";
+
     auto group = Group::get(id.toInt());
+    texport(view);
+    texport(quizes);
     texport(group);
     render("show", "dashboard");
 }
@@ -89,10 +140,9 @@ void GroupController::create()
 
     case Tf::Post: {
         int id = User::getByIdentityKey(this->identityKeyOfLoginUser()).id();
-        auto group = httpRequest().formItems("group");
-        group["userId"] = QVariant(id);
+        QString name = httpRequest().formItemValue("name");
+        auto model = Group::create(name, GetRandomString(), id);
 
-        auto model = Group::create(group);
         if (!model.isNull()) {
             QVariantMap group_user;
 
@@ -108,7 +158,6 @@ void GroupController::create()
         } else {
             QString error = "Failed to create.";
             texport(error);
-            texport(group);
             render("create", "dashboard");
         }
         break; }

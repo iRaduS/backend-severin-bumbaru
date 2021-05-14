@@ -1,0 +1,6 @@
+<%#include "group.h"%>
+<% tfetch(Group, group); %>
+<% tfetch(int, userId); %>
+<% tfetch(QString, quizes); %>
+
+<div id="quiz" data-quiz="<%= quizes %>" data-groupid="<%= group.id() %>"></div>

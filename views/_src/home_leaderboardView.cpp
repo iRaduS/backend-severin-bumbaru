@@ -13,7 +13,7 @@ public:
 
 QString home_leaderboardView::toString()
 {
-  responsebody.reserve(3993);
+  responsebody.reserve(4006);
   responsebody += QStringLiteral("<h1 class=\"title\">Leaderboard</h1>\n");
   tfetch(QList<QVariantMap>, result);
   responsebody += QStringLiteral("<div class=\"container mt-6 is-fullhd\">\n  <div class=\"box\">\n    <div class=\"columns\">\n      <div class=\"column column--flex is-one-fifth\"></div>\n      <div class=\"column column--flex column-1 is-one-fifth\">\n        <div class=\"icon1 is-large fas fa-trophy\"></div>\n      </div>\n      <div class=\"column column--flex column-2 is-one-fifth\">\n        <div class=\"icon2 is-large fas fa-trophy\"></div>\n      </div>\n      <div class=\"column column--flex column-3 is-one-fifth\">\n        <div class=\"icon3 is-large fas fa-trophy\"></div>\n      </div>\n      <div class=\"column column--flex is-one-fifth\"></div>\n    </div>\n    <div class=\"columns\">\n      <div class=\"column column--flex is-one-fifth\"></div>\n      <div class=\"column column--flex column-1 is-one-fifth has-text-centered\">\n        ");
@@ -46,7 +46,7 @@ QString home_leaderboardView::toString()
   } else {
   responsebody += QStringLiteral("          <div>N/A</div>\n        ");
   };
-  responsebody += QStringLiteral("      </div>\n      <div class=\"column column--flex is-one-fifth\"></div>\n    </div>\n  </div>\n  <div class=\"box is-flex is-justify-content-center is-align-items-center\">\n    <table class=\"table\">\n      <thead>\n        <tr>\n          <th><abbr title=\"#\">#</abbr></th>\n          <th><abbr title=\"Username & name\">Username & name</abbr></th>\n          <th><abbr title=\"Credits\">Credits</abbr></th>\n        </tr>\n      </thead>\n      <tbody>\n        ");
+  responsebody += QStringLiteral("      </div>\n      <div class=\"column column--flex is-one-fifth\"></div>\n    </div>\n  </div>\n  <div class=\"box is-flex is-justify-content-center is-align-items-center\">\n    <table class=\"table is-fullwidth\">\n      <thead>\n        <tr>\n          <th><abbr title=\"#\">#</abbr></th>\n          <th><abbr title=\"Username & name\">Username & name</abbr></th>\n          <th><abbr title=\"Credits\">Credits</abbr></th>\n        </tr>\n      </thead>\n      <tbody>\n        ");
   for (int i = 3; i < result.size(); ++i) {
   responsebody += QStringLiteral("          <tr>\n            <th>");
   responsebody += THttpUtility::htmlEscape(i + 1);

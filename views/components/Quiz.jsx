@@ -1,0 +1,135 @@
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
+import './quiz.css'
+
+const Quiz = ({...props}) => {
+  const [current, setCurrent] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const [seconds, setSeconds] = useState(null);
+  const [correct, setCorrect] = useState(0);
+  const [bad, setBad] = useState(0);
+  const [finish, setFinish] = useState(false);
+  const [credits, setCredits] = useState(0);
+  let timer;
+
+  React.useEffect(() => {
+    console.log(JSON.parse(props.quiz));
+  }, [])
+
+  React.useEffect(() => {
+    if (seconds > 0 && seconds != null) {
+      timer = setTimeout(() => {
+        setProgress(progress + 100 / JSON.parse(props.quiz).details[current].timer)
+        setSeconds(seconds - 1)
+      }, 1000);
+    } else if (seconds == 0 || seconds == -1) {
+      if (seconds == 0) {
+        setCredits(credits - 50);
+        setBad(bad + 1);
+      }
+      if (current != JSON.parse(props.quiz).details.length - 1) {
+        setCurrent(current + 1);
+      } else {
+        setFinish(true);
+      }
+    }
+  }, [seconds])
+
+  React.useEffect(() => {
+
+  }, [finish])
+
+  React.useEffect(() => {
+    setSeconds(JSON.parse(props.quiz).details[current].timer);
+    setProgress(0);
+  }, [current])
+
+  const checkAnswer = (id) => {
+    if (JSON.parse(props.quiz).details[current].correct[id]) {
+      setCredits(Math.round(credits + 100 / (JSON.parse(props.quiz).details[current].timer - seconds)))
+      setCorrect(correct + 1);
+    }
+    else {
+      setCredits(credits - 50);
+      setBad(bad + 1);
+    }
+
+    clearTimeout(timer);
+    setSeconds(-1);
+  }
+
+  return (
+    <>
+      {
+        finish == true ? 
+        <section class="hero is-fullheight is-link is-bold">
+          <div class="hero-body">
+            <div class="container has-text-centered">
+              <h1 class="title">⭐️ You finished ⭐️</h1>
+              <button className="button is-danger mb-2" onClick={() => window.location.href = `http://${location.host}/Group/show/${props.groupid}`}>
+                Go back to quizzes
+              </button>
+              <div class="tile is-ancestor has-text-centered">
+                <div class="tile is-parent is-dark">
+                  <article class="tile is-child box has-background-success">
+                    <p class="title">{correct}</p>
+                    <p class="subtitle">Correct Answers</p>
+                  </article>
+                </div>
+                <div class="tile is-parent">
+                <article class="tile is-child box has-background-success">
+                    <p class="title">{bad}</p>
+                    <p class="subtitle">Bad Answers</p>
+                  </article>
+                </div>
+                <div class="tile is-parent">
+                  <article class="tile is-child box has-background-success">
+                    <p class="title">{credits}</p>
+                    <p class="subtitle">Credits</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        :
+      <div class="container is-max-desktop">
+        <article class="message">
+          <div class="message-header">
+              <p>Intrebarea {current + 1} din {JSON.parse(props.quiz).details.length}</p>
+          </div>
+          <div class="message-body">
+            <h2 class="subtitle"><strong>{JSON.parse(props.quiz).details[current].question}</strong></h2>
+          </div>
+          {
+            seconds != 0 && 
+            <div class="has-text-centered has-text-danger is-flex-inline"><strong>Timpul ramas pentru intrebare</strong> {seconds} secunde(a)</div>
+          }
+          <progress class="progress is-danger is-large" value={progress} max="100"></progress>
+          <div class="px-3 columns 1">
+            <div class="column is-half">
+              <button class="button button--custom is-link" onClick={() => checkAnswer(0)}>{JSON.parse(props.quiz).details[current].answers[0]}</button>
+            </div>
+            <div class="column is-half">
+              <button class="button button--custom is-danger" onClick={() => checkAnswer(1)}>{JSON.parse(props.quiz).details[current].answers[1]}</button>
+            </div>
+          </div>
+          <div class="px-3 columns 2">
+              <div class="column is-half">
+                  <button class="button button--custom is-warning" onClick={() => checkAnswer(2)}>{JSON.parse(props.quiz).details[current].answers[2]}</button>
+              </div>
+              <div class="column is-half">
+                  <button class="button button--custom is-success" onClick={() => checkAnswer(3)}>{JSON.parse(props.quiz).details[current].answers[3]}</button>
+              </div>
+          </div>
+        </article>
+      </div>
+      }
+    </>
+  );
+}
+
+if (document.getElementById('quiz')) {
+  const props = Object.assign({}, document.getElementById('quiz').dataset)
+  ReactDOM.render(<Quiz {...props} />, document.getElementById('quiz'))
+}

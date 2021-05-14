@@ -255,9 +255,6 @@ const QuizCreate = ({...props}) => {
         </div>
 
         <input hidden type="file" ref={fileRef} onChange={handleFileInput} />
-        <button className="button is-fullwidth is-primary" onClick={handleButtonRef}>
-          <strong>Upload an image for the question</strong>
-        </button>
       </div>
 
       <div className="columns">

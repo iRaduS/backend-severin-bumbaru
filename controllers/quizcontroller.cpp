@@ -1,6 +1,39 @@
 #include "quizcontroller.h"
 #include "quiz.h"
+#include "group.h"
+#include "user.h"
 #include "tdebug.h"
+
+void QuizController::remove(const QString &group_id, const QString &id) {
+    if (httpRequest().method() != Tf::Delete) {
+        renderErrorResponse(Tf::NotFound);
+        return;
+    }
+
+    auto quiz = Quiz::get(id.toInt());
+    quiz.remove();
+    redirect(url("group", "show", group_id.toInt()));
+}
+
+void QuizController::show(const QString &group_id, const QString &id) {
+    int userId = User::getByIdentityKey(this->identityKeyOfLoginUser()).id();
+    auto group = Group::get(group_id.toInt());
+    auto quiz = Quiz::get(id.toInt());
+
+    QString quizes;
+    quizes += "{\"id\": \"";
+    quizes += QString::number(quiz.id()); 
+    quizes += "\", \"name\": \"";
+    quizes += quiz.name(); 
+    quizes += "\", \"details\":";
+    quizes += quiz.details(); 
+    quizes += "}";
+
+    texport(userId);
+    texport(group);
+    texport(quizes);
+    render("show", "quiz");
+}
 
 void QuizController::create(const QString &id) {
     switch (httpRequest().method()) {

@@ -14,7 +14,7 @@ public:
 
 QString group_saveView::toString()
 {
-  responsebody.reserve(2932);
+  responsebody.reserve(2945);
     tfetch(QVariantMap, group);
   responsebody += QStringLiteral("<h1 class=\"title\">Show Group Informations</h1>\n");
   responsebody += QVariant(formTag(urla("save", group["id"]), Tf::Post, true, a("class", "box"))).toString();
@@ -24,7 +24,7 @@ QString group_saveView::toString()
   responsebody += THttpUtility::htmlEscape(group["invite"]);
   responsebody += QStringLiteral("\" placeholder=\"DEFAULT_INVITE\" />\n      <a class=\"button is-warning is-selected\" onclick=\"document.getElementById('invite').value = Math.random().toString(36).replace(/[^a-z]+/g, '');\"><i class=\"fas fa-sync-alt\"></i></a>\n    </div>\n  </div>\n  <button class=\"button is-link\" type=\"submit\">Submit</button>\n</form>\n");
   tfetch(QList<QVariantMap>, memberList);
-  responsebody += QStringLiteral("<h1 class=\"title\">Listing Members</h1>\n<div class=\"box is-flex is-justify-content-center is-align-items-center\">\n  <table class=\"table\">\n    <thead>\n      <tr>\n        <th><abbr title=\"Group name\">Username and name</abbr></th>\n        <th><abbr title=\"Role in group\">Role in group</abbr></th>\n        <th><abbr title=\"Options\">Options</abbr></th>\n      </tr>\n    </thead>\n    ");
+  responsebody += QStringLiteral("<h1 class=\"title\">Listing Members</h1>\n<div class=\"box is-flex is-justify-content-center is-align-items-center\">\n  <table class=\"table is-fullwidth\">\n    <thead>\n      <tr>\n        <th><abbr title=\"Group name\">Username and name</abbr></th>\n        <th><abbr title=\"Role in group\">Role in group</abbr></th>\n        <th><abbr title=\"Options\">Options</abbr></th>\n      </tr>\n    </thead>\n    ");
   for (const auto &i : memberList) {
   responsebody += QStringLiteral("      <tr>\n        <th>\n          ");
   responsebody += THttpUtility::htmlEscape(i["name"]);

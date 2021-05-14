@@ -1,7 +1,13 @@
 <%#include "group.h" %>
+<%#include "groupuser.h" %>
 <% tfetch(Group, group); %>
+<% tfetch(QString, quizes); %>
+<% tfetch(GroupUser, view); %>
 <h1 class="title">Create a new quiz for</h1>
 <h2 class="subtitle"><%= group.name() %></h2>
+<% if (view.role() == 2) { %>
 <a class="button is-link is-outline is-small" href="<%== url("quiz", "create", group.id()) %>">
   <span>Create a new quiz <i class="fas fa-plus"></i></span>
 </a>
+<% } %>
+<div id="list-quiz" data-role="<%= view.role() %>" data-groupid="<%= group.id() %>" data-quiz="<%= quizes %>"></div>

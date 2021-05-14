@@ -11,6 +11,8 @@ public:
     QuizController() : ApplicationController() { }
 
 public slots:
+    void show(const QString &group_id, const QString &id);
+    void remove(const QString &group_id, const QString &id);
     void create(const QString &id);
 };
 
