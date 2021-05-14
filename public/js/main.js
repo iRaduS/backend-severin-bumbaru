@@ -2537,15 +2537,33 @@ if (document.getElementById('list-quiz')) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _quiz_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./quiz.css */ "./views/components/quiz.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _quiz_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./quiz.css */ "./views/components/quiz.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -2568,49 +2586,80 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
+
 var Quiz = function Quiz(_ref) {
   var props = _extends({}, _ref);
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
       current = _useState2[0],
       setCurrent = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(0),
       _useState4 = _slicedToArray(_useState3, 2),
       progress = _useState4[0],
       setProgress = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
       _useState6 = _slicedToArray(_useState5, 2),
       seconds = _useState6[0],
       setSeconds = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(0),
       _useState8 = _slicedToArray(_useState7, 2),
       correct = _useState8[0],
       setCorrect = _useState8[1];
 
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(0),
       _useState10 = _slicedToArray(_useState9, 2),
       bad = _useState10[0],
       setBad = _useState10[1];
 
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
       _useState12 = _slicedToArray(_useState11, 2),
       finish = _useState12[0],
       setFinish = _useState12[1];
 
-  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(0),
       _useState14 = _slicedToArray(_useState13, 2),
       credits = _useState14[0],
       setCredits = _useState14[1];
 
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(JSON.parse(props.fifty)),
+      _useState16 = _slicedToArray(_useState15, 2),
+      fifty = _useState16[0],
+      setFifty = _useState16[1];
+
+  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(JSON.parse(props.hint)),
+      _useState18 = _slicedToArray(_useState17, 2),
+      hint = _useState18[0],
+      setHint = _useState18[1];
+
+  var _useState19 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
+      _useState20 = _slicedToArray(_useState19, 2),
+      showHint = _useState20[0],
+      setShowHint = _useState20[1];
+
+  var _useState21 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
+      _useState22 = _slicedToArray(_useState21, 2),
+      bhint = _useState22[0],
+      setShowBHint = _useState22[1];
+
+  var _useState23 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
+      _useState24 = _slicedToArray(_useState23, 2),
+      bgambit = _useState24[0],
+      setShowBGambit = _useState24[1];
+
+  var _useState25 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([true, true, true, true]),
+      _useState26 = _slicedToArray(_useState25, 2),
+      answers = _useState26[0],
+      setAnswers = _useState26[1];
+
   var timer;
-  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(function () {
+  react__WEBPACK_IMPORTED_MODULE_2__.useEffect(function () {
     console.log(JSON.parse(props.quiz));
   }, []);
-  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(function () {
+  react__WEBPACK_IMPORTED_MODULE_2__.useEffect(function () {
     if (seconds > 0 && seconds != null) {
       timer = setTimeout(function () {
         setProgress(progress + 100 / JSON.parse(props.quiz).details[current].timer);
@@ -2629,10 +2678,31 @@ var Quiz = function Quiz(_ref) {
       }
     }
   }, [seconds]);
-  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(function () {}, [finish]);
-  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(function () {
+  react__WEBPACK_IMPORTED_MODULE_2__.useEffect( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            if (!finish) {
+              _context.next = 3;
+              break;
+            }
+
+            _context.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/quiz/finish/".concat(props.user));
+
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  })), [finish]);
+  react__WEBPACK_IMPORTED_MODULE_2__.useEffect(function () {
     setSeconds(JSON.parse(props.quiz).details[current].timer);
     setProgress(0);
+    setShowHint(false);
+    setAnswers([true, true, true, true]);
   }, [current]);
 
   var checkAnswer = function checkAnswer(id) {
@@ -2648,56 +2718,229 @@ var Quiz = function Quiz(_ref) {
     setSeconds(-1);
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: finish == true ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("section", {
+  var handleHintChange = /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+      var userForm;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              setHint(hint - 1);
+              setShowHint(true);
+              setShowBHint(false);
+              userForm = new FormData();
+              userForm.append('fifty', fifty);
+              userForm.append('hint', hint);
+              _context2.next = 8;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/quiz/user/".concat(props.user), userForm);
+
+            case 8:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function handleHintChange() {
+      return _ref3.apply(this, arguments);
+    };
+  }();
+
+  var handleGambitChange = /*#__PURE__*/function () {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+      var auxAnswers, chances, userForm;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              setFifty(fifty - 1);
+              setShowBGambit(false);
+              auxAnswers = _toConsumableArray(answers);
+              chances = Math.floor(Math.random() * 3);
+
+              if (!JSON.parse(props.quiz).details[current].correct[0]) {
+                _context3.next = 19;
+                break;
+              }
+
+              _context3.t0 = chances;
+              _context3.next = _context3.t0 === 0 ? 8 : _context3.t0 === 1 ? 11 : _context3.t0 === 2 ? 14 : 17;
+              break;
+
+            case 8:
+              auxAnswers[1] = false;
+              auxAnswers[2] = false;
+              return _context3.abrupt("break", 17);
+
+            case 11:
+              auxAnswers[1] = false;
+              auxAnswers[3] = false;
+              return _context3.abrupt("break", 17);
+
+            case 14:
+              auxAnswers[3] = false;
+              auxAnswers[2] = false;
+              return _context3.abrupt("break", 17);
+
+            case 17:
+              _context3.next = 62;
+              break;
+
+            case 19:
+              if (!JSON.parse(props.quiz).details[current].correct[1]) {
+                _context3.next = 34;
+                break;
+              }
+
+              _context3.t1 = chances;
+              _context3.next = _context3.t1 === 0 ? 23 : _context3.t1 === 1 ? 26 : _context3.t1 === 2 ? 29 : 32;
+              break;
+
+            case 23:
+              auxAnswers[0] = false;
+              auxAnswers[2] = false;
+              return _context3.abrupt("break", 32);
+
+            case 26:
+              auxAnswers[0] = false;
+              auxAnswers[3] = false;
+              return _context3.abrupt("break", 32);
+
+            case 29:
+              auxAnswers[3] = false;
+              auxAnswers[2] = false;
+              return _context3.abrupt("break", 32);
+
+            case 32:
+              _context3.next = 62;
+              break;
+
+            case 34:
+              if (!JSON.parse(props.quiz).details[current].correct[2]) {
+                _context3.next = 49;
+                break;
+              }
+
+              _context3.t2 = chances;
+              _context3.next = _context3.t2 === 0 ? 38 : _context3.t2 === 1 ? 41 : _context3.t2 === 2 ? 44 : 47;
+              break;
+
+            case 38:
+              auxAnswers[0] = false;
+              auxAnswers[1] = false;
+              return _context3.abrupt("break", 47);
+
+            case 41:
+              auxAnswers[0] = false;
+              auxAnswers[3] = false;
+              return _context3.abrupt("break", 47);
+
+            case 44:
+              auxAnswers[3] = false;
+              auxAnswers[1] = false;
+              return _context3.abrupt("break", 47);
+
+            case 47:
+              _context3.next = 62;
+              break;
+
+            case 49:
+              if (!JSON.parse(props.quiz).details[current].correct[3]) {
+                _context3.next = 62;
+                break;
+              }
+
+              _context3.t3 = chances;
+              _context3.next = _context3.t3 === 0 ? 53 : _context3.t3 === 1 ? 56 : _context3.t3 === 2 ? 59 : 62;
+              break;
+
+            case 53:
+              auxAnswers[0] = false;
+              auxAnswers[1] = false;
+              return _context3.abrupt("break", 62);
+
+            case 56:
+              auxAnswers[0] = false;
+              auxAnswers[2] = false;
+              return _context3.abrupt("break", 62);
+
+            case 59:
+              auxAnswers[2] = false;
+              auxAnswers[1] = false;
+              return _context3.abrupt("break", 62);
+
+            case 62:
+              setAnswers(auxAnswers);
+              userForm = new FormData();
+              userForm.append('fifty', fifty);
+              userForm.append('hint', hint);
+              _context3.next = 68;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/quiz/user/".concat(props.user), userForm);
+
+            case 68:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+
+    return function handleGambitChange() {
+      return _ref4.apply(this, arguments);
+    };
+  }();
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+    children: finish == true ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("section", {
       "class": "hero is-fullheight is-link is-bold",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         "class": "hero-body",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           "class": "container has-text-centered",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h1", {
             "class": "title",
             children: "\u2B50\uFE0F You finished \u2B50\uFE0F"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
             className: "button is-danger mb-2",
             onClick: function onClick() {
               return window.location.href = "http://".concat(location.host, "/Group/show/").concat(props.groupid);
             },
             children: "Go back to quizzes"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
             "class": "tile is-ancestor has-text-centered",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
               "class": "tile is-parent is-dark",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("article", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("article", {
                 "class": "tile is-child box has-background-success",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
                   "class": "title",
                   children: correct
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
                   "class": "subtitle",
                   children: "Correct Answers"
                 })]
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
               "class": "tile is-parent",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("article", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("article", {
                 "class": "tile is-child box has-background-success",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
                   "class": "title",
                   children: bad
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
                   "class": "subtitle",
                   children: "Bad Answers"
                 })]
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
               "class": "tile is-parent",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("article", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("article", {
                 "class": "tile is-child box has-background-success",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
                   "class": "title",
                   children: credits
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
                   "class": "subtitle",
                   children: "Credits"
                 })]
@@ -2706,46 +2949,46 @@ var Quiz = function Quiz(_ref) {
           })]
         })
       })
-    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       "class": "container is-max-desktop",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("article", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("article", {
         "class": "message",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
           "class": "message-header",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-            children: ["Intrebarea ", current + 1, " din ", JSON.parse(props.quiz).details.length]
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+            children: ["Question ", current + 1, " out of ", JSON.parse(props.quiz).details.length]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
           "class": "message-body",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
             "class": "subtitle",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong", {
               children: JSON.parse(props.quiz).details[current].question
             })
           })
-        }), seconds != 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        }), seconds != 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           "class": "has-text-centered has-text-danger is-flex-inline",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
-            children: "Timpul ramas pentru intrebare"
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong", {
+            children: "Remaining time for the question"
           }), " ", seconds, " secunde(a)"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("progress", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("progress", {
           "class": "progress is-danger is-large",
           value: progress,
           max: "100"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           "class": "px-3 columns 1",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             "class": "column is-half",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+            children: answers[0] == true && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
               "class": "button button--custom is-link",
               onClick: function onClick() {
                 return checkAnswer(0);
               },
               children: JSON.parse(props.quiz).details[current].answers[0]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             "class": "column is-half",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+            children: answers[1] == true && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
               "class": "button button--custom is-danger",
               onClick: function onClick() {
                 return checkAnswer(1);
@@ -2753,20 +2996,20 @@ var Quiz = function Quiz(_ref) {
               children: JSON.parse(props.quiz).details[current].answers[1]
             })
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           "class": "px-3 columns 2",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             "class": "column is-half",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+            children: answers[2] == true && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
               "class": "button button--custom is-warning",
               onClick: function onClick() {
                 return checkAnswer(2);
               },
               children: JSON.parse(props.quiz).details[current].answers[2]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             "class": "column is-half",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+            children: answers[3] == true && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
               "class": "button button--custom is-success",
               onClick: function onClick() {
                 return checkAnswer(3);
@@ -2775,14 +3018,38 @@ var Quiz = function Quiz(_ref) {
             })
           })]
         })]
-      })
+      }), showHint == true && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        "class": "notification is-link",
+        children: JSON.parse(props.quiz).details[current].hint
+      }), bgambit == true && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("button", {
+        className: "mx-1 button is-black is-pulled-left",
+        onClick: handleGambitChange,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong", {
+          children: "Use a Gambit"
+        }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
+          "class": "ml-1 tag is-success",
+          children: [fifty, " owned"]
+        })]
+      }), bhint == true && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("button", {
+        className: "mx-1 button is-black is-pulled-left",
+        onClick: handleHintChange,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong", {
+          children: "Use a Riddle"
+        }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
+          "class": "ml-1 tag is-success",
+          children: [hint, " owned"]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("small", {
+        "class": "mx-1",
+        children: "*The power-ups can be used only once in a quiz"
+      })]
     })
   });
 };
 
 if (document.getElementById('quiz')) {
   var props = Object.assign({}, document.getElementById('quiz').dataset);
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Quiz, _objectSpread({}, props)), document.getElementById('quiz'));
+  react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Quiz, _objectSpread({}, props)), document.getElementById('quiz'));
 }
 
 /***/ }),

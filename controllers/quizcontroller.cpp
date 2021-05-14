@@ -16,7 +16,10 @@ void QuizController::remove(const QString &group_id, const QString &id) {
 }
 
 void QuizController::show(const QString &group_id, const QString &id) {
-    int userId = User::getByIdentityKey(this->identityKeyOfLoginUser()).id();
+    auto user = User::getByIdentityKey(this->identityKeyOfLoginUser());
+    int userId = user.id();
+    int fiftyFifty = user.fiftyFifty();
+    int hintGuesser = user.hintGuesser(); 
     auto group = Group::get(group_id.toInt());
     auto quiz = Quiz::get(id.toInt());
 
@@ -29,6 +32,8 @@ void QuizController::show(const QString &group_id, const QString &id) {
     quizes += quiz.details(); 
     quizes += "}";
 
+    texport(fiftyFifty);
+    texport(hintGuesser);
     texport(userId);
     texport(group);
     texport(quizes);

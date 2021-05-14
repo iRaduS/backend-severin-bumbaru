@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import './quiz.css'
@@ -10,6 +11,12 @@ const Quiz = ({...props}) => {
   const [bad, setBad] = useState(0);
   const [finish, setFinish] = useState(false);
   const [credits, setCredits] = useState(0);
+  const [fifty, setFifty] = useState(JSON.parse(props.fifty));
+  const [hint, setHint] = useState(JSON.parse(props.hint));
+  const [showHint, setShowHint] = useState(false);
+  const [bhint, setShowBHint] = useState(true);
+  const [bgambit, setShowBGambit] = useState(true);
+  const [answers, setAnswers] = useState([true, true, true, true]);
   let timer;
 
   React.useEffect(() => {
@@ -35,13 +42,17 @@ const Quiz = ({...props}) => {
     }
   }, [seconds])
 
-  React.useEffect(() => {
-
+  React.useEffect(async () => {
+    if (finish) {
+      await axios.post(`/quiz/finish/${props.user}`)
+    }
   }, [finish])
 
   React.useEffect(() => {
     setSeconds(JSON.parse(props.quiz).details[current].timer);
     setProgress(0);
+    setShowHint(false);
+    setAnswers([true, true, true, true])
   }, [current])
 
   const checkAnswer = (id) => {
@@ -56,6 +67,55 @@ const Quiz = ({...props}) => {
 
     clearTimeout(timer);
     setSeconds(-1);
+  }
+  const handleHintChange = async () => {
+    setHint(hint - 1);
+    setShowHint(true);
+    setShowBHint(false);
+
+    let userForm = new FormData();
+    userForm.append('fifty', fifty)
+    userForm.append('hint', hint)
+    await axios.post(`/quiz/user/${props.user}`, userForm)
+  }
+
+  const handleGambitChange = async () => {
+    setFifty(fifty - 1);
+    setShowBGambit(false);
+
+    const auxAnswers = [...answers];
+    const chances = Math.floor(Math.random() * 3);
+    if (JSON.parse(props.quiz).details[current].correct[0]) {
+      switch (chances) {
+        case 0: auxAnswers[1] = false; auxAnswers[2] = false; break;
+        case 1: auxAnswers[1] = false; auxAnswers[3] = false; break;
+        case 2: auxAnswers[3] = false; auxAnswers[2] = false; break;
+      }
+    } else if (JSON.parse(props.quiz).details[current].correct[1]) {
+      switch (chances) {
+        case 0: auxAnswers[0] = false; auxAnswers[2] = false; break;
+        case 1: auxAnswers[0] = false; auxAnswers[3] = false; break;
+        case 2: auxAnswers[3] = false; auxAnswers[2] = false; break;
+      }
+    } else if (JSON.parse(props.quiz).details[current].correct[2]) {
+      switch (chances) {
+        case 0: auxAnswers[0] = false; auxAnswers[1] = false; break;
+        case 1: auxAnswers[0] = false; auxAnswers[3] = false; break;
+        case 2: auxAnswers[3] = false; auxAnswers[1] = false; break;
+      }
+    } else if (JSON.parse(props.quiz).details[current].correct[3]) {
+      switch (chances) {
+        case 0: auxAnswers[0] = false; auxAnswers[1] = false; break;
+        case 1: auxAnswers[0] = false; auxAnswers[2] = false; break;
+        case 2: auxAnswers[2] = false; auxAnswers[1] = false; break;
+      }
+    }
+    setAnswers(auxAnswers);
+
+    let userForm = new FormData();
+    userForm.append('fifty', fifty)
+    userForm.append('hint', hint)
+    await axios.post(`/quiz/user/${props.user}`, userForm)
   }
 
   return (
@@ -96,33 +156,60 @@ const Quiz = ({...props}) => {
       <div class="container is-max-desktop">
         <article class="message">
           <div class="message-header">
-              <p>Intrebarea {current + 1} din {JSON.parse(props.quiz).details.length}</p>
+              <p>Question {current + 1} out of {JSON.parse(props.quiz).details.length}</p>
           </div>
           <div class="message-body">
             <h2 class="subtitle"><strong>{JSON.parse(props.quiz).details[current].question}</strong></h2>
           </div>
           {
             seconds != 0 && 
-            <div class="has-text-centered has-text-danger is-flex-inline"><strong>Timpul ramas pentru intrebare</strong> {seconds} secunde(a)</div>
+            <div class="has-text-centered has-text-danger is-flex-inline"><strong>Remaining time for the question</strong> {seconds} secunde(a)</div>
           }
           <progress class="progress is-danger is-large" value={progress} max="100"></progress>
           <div class="px-3 columns 1">
             <div class="column is-half">
-              <button class="button button--custom is-link" onClick={() => checkAnswer(0)}>{JSON.parse(props.quiz).details[current].answers[0]}</button>
+              {
+                answers[0] == true && 
+                <button class="button button--custom is-link" onClick={() => checkAnswer(0)}>{JSON.parse(props.quiz).details[current].answers[0]}</button>
+              }
             </div>
             <div class="column is-half">
-              <button class="button button--custom is-danger" onClick={() => checkAnswer(1)}>{JSON.parse(props.quiz).details[current].answers[1]}</button>
+              {
+                answers[1] == true && 
+                <button class="button button--custom is-danger" onClick={() => checkAnswer(1)}>{JSON.parse(props.quiz).details[current].answers[1]}</button>
+              }
             </div>
           </div>
           <div class="px-3 columns 2">
               <div class="column is-half">
-                  <button class="button button--custom is-warning" onClick={() => checkAnswer(2)}>{JSON.parse(props.quiz).details[current].answers[2]}</button>
+                  {
+                    answers[2] == true &&
+                    <button class="button button--custom is-warning" onClick={() => checkAnswer(2)}>{JSON.parse(props.quiz).details[current].answers[2]}</button>
+                  }
               </div>
               <div class="column is-half">
+                {
+                  answers[3] == true &&
                   <button class="button button--custom is-success" onClick={() => checkAnswer(3)}>{JSON.parse(props.quiz).details[current].answers[3]}</button>
+                }
               </div>
           </div>
         </article>
+
+        { showHint == true &&
+          <div class="notification is-link">
+            {JSON.parse(props.quiz).details[current].hint}
+          </div>
+        }
+        {
+          bgambit == true &&
+          <button className="mx-1 button is-black is-pulled-left" onClick={handleGambitChange}><strong>Use a Gambit</strong> <span class="ml-1 tag is-success">{fifty} owned</span></button>
+        }
+        {
+          bhint == true &&
+          <button className="mx-1 button is-black is-pulled-left" onClick={handleHintChange}><strong>Use a Riddle</strong> <span class="ml-1 tag is-success">{hint} owned</span></button>
+        }
+        <small class="mx-1">*The power-ups can be used only once in a quiz</small>
       </div>
       }
     </>

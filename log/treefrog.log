@@ -3818,3 +3818,99 @@
 2021-05-14 05:57:03 INFO  [65951] TreeFrog Framework version 1.31.1
 2021-05-14 05:57:03 INFO  [65951] Execution environment: Qt 5.15.2 / macOS 11.2
 2021-05-14 05:57:03 INFO  [65951] TreeFrog application servers started up.
+2021-05-14 06:19:03 WARN  [1156391] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 06:19:20 WARN  [1156698] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 06:19:20 WARN  [1156390] Reading a socket timed out after 10 seconds. Descriptor:11
+2021-05-14 06:21:04 WARN  [1157326] Reading a socket timed out after 10 seconds. Descriptor:18
+2021-05-14 06:21:07 WARN  [1157310] Reading a socket timed out after 10 seconds. Descriptor:11
+2021-05-14 06:21:27 WARN  [1157649] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 06:21:27 WARN  [1157648] Reading a socket timed out after 10 seconds. Descriptor:11
+2021-05-14 06:42:34 WARN  [1172554] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 06:42:34 WARN  [1172553] Reading a socket timed out after 10 seconds. Descriptor:11
+2021-05-14 06:43:51 WARN  [1173511] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 06:44:00 WARN  [1173509] Reading a socket timed out after 10 seconds. Descriptor:11
+2021-05-14 07:03:15 WARN  [1184124] Reading a socket timed out after 10 seconds. Descriptor:11
+2021-05-14 07:23:32 INFO  [65951] TreeFrog application servers shutting down
+2021-05-14 07:23:33 INFO  [65951] TreeFrog application servers shutdown completed
+2021-05-14 07:23:33 INFO  [65951] Restarts TreeFrog application servers
+2021-05-14 07:23:33 INFO  [65951] TreeFrog Framework version 1.31.1
+2021-05-14 07:23:33 INFO  [65951] Execution environment: Qt 5.15.2 / macOS 11.2
+2021-05-14 07:23:33 INFO  [65951] TreeFrog application servers started up.
+2021-05-14 07:25:44 WARN  [1198547] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:25:46 WARN  [1198545] unsupported content-type: 
+2021-05-14 07:25:55 WARN  [1198733] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:26:06 WARN  [1198823] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:26:07 WARN  [1198545] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:26:31 WARN  [1199103] unsupported content-type: 
+2021-05-14 07:26:44 WARN  [1199122] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:26:44 WARN  [1199103] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:26:59 WARN  [1199300] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:27:09 WARN  [1199375] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:27:19 WARN  [1199514] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:27:21 WARN  [1199298] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:27:36 WARN  [1199698] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:27:39 WARN  [1199696] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:27:52 WARN  [1199870] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:28:02 WARN  [1199977] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:28:06 WARN  [1199868] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:29:05 WARN  [1200397] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:29:12 WARN  [1200396] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:29:27 WARN  [1200688] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:29:41 WARN  [1200896] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:29:50 WARN  [1200686] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:30:31 WARN  [1201452] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:30:42 WARN  [1201543] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:30:46 WARN  [1201450] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:31:21 WARN  [1202081] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:31:21 WARN  [1202079] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:31:40 WARN  [1202304] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:31:42 WARN  [1202303] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:31:52 WARN  [1202501] unsupported content-type: 
+2021-05-14 07:31:53 WARN  [1202503] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:32:06 WARN  [1202587] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:32:08 WARN  [1202501] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:32:08 WARN  [1202695] unsupported content-type: 
+2021-05-14 07:32:23 WARN  [1202731] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:32:23 WARN  [1202695] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:38:26 WARN  [1206907] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:38:32 WARN  [1206906] unsupported content-type: 
+2021-05-14 07:38:43 WARN  [1207084] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:38:43 WARN  [1206906] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:39:01 WARN  [1207515] unsupported content-type: 
+2021-05-14 07:39:02 WARN  [1207517] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:39:13 WARN  [1207596] Reading a socket timed out after 10 seconds. Descriptor:16
+2021-05-14 07:39:13 WARN  [1207515] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:40:41 WARN  [1208879] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:40:42 WARN  [1208878] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:42:55 WARN  [1210599] unsupported content-type: 
+2021-05-14 07:42:58 WARN  [1210600] Reading a socket timed out after 10 seconds. Descriptor:16
+2021-05-14 07:43:07 WARN  [1210599] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:44:09 WARN  [1211594] unsupported content-type: 
+2021-05-14 07:44:16 WARN  [1211596] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:44:27 WARN  [1211748] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:44:37 WARN  [1211868] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:44:45 WARN  [1211594] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:45:00 WARN  [1212194] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 07:45:00 WARN  [1212192] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:49:40 WARN  [1215055] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:49:46 WARN  [1215054] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:50:01 WARN  [1215404] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:50:01 WARN  [1215403] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:50:11 WARN  [1215540] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:50:11 WARN  [1215542] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:59:02 WARN  [1220850] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:59:19 WARN  [1221007] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 07:59:24 WARN  [1220849] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 07:59:42 WARN  [1221285] Reading a socket timed out after 10 seconds. Descriptor:16
+2021-05-14 07:59:53 WARN  [1221402] Reading a socket timed out after 10 seconds. Descriptor:16
+2021-05-14 07:59:55 WARN  [1221283] unsupported content-type: 
+2021-05-14 08:00:07 WARN  [1221472] Reading a socket timed out after 10 seconds. Descriptor:16
+2021-05-14 08:00:07 WARN  [1221283] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 08:01:49 WARN  [1222570] Reading a socket timed out after 10 seconds. Descriptor:16
+2021-05-14 08:02:00 WARN  [1222662] Reading a socket timed out after 10 seconds. Descriptor:16
+2021-05-14 08:02:13 WARN  [1222893] Reading a socket timed out after 10 seconds. Descriptor:16
+2021-05-14 08:02:17 WARN  [1222568] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 08:02:44 WARN  [1223292] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 08:02:44 WARN  [1223290] unsupported content-type: 
+2021-05-14 08:02:56 WARN  [1223692] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 08:02:56 WARN  [1223290] Reading a socket timed out after 10 seconds. Descriptor:13
