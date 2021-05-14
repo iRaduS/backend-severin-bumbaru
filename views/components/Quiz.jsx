@@ -58,7 +58,7 @@ const Quiz = ({...props}) => {
         creditForm.append('coins', credits)
         creditForm.append('fifty', fifty)
         creditForm.append('hint', hint)
-        await axios.post(`/quiz/finish/${props.user}`, creditForm)
+        await axios.post(`/quiz/finish/${JSON.parse(props.quiz).id}/${props.user}`, creditForm)
       })();
     }
   }, [finish])

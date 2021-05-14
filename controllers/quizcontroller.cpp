@@ -6,6 +6,7 @@
 #include "creditlog.h"
 #include "tsqlormapper.h"
 #include "sqlobjects/userobject.h"
+#include "userquiz.h"
 
 void QuizController::remove(const QString &group_id, const QString &id) {
     if (httpRequest().method() != Tf::Delete) {
@@ -59,7 +60,7 @@ void QuizController::user(const QString &id) {
     user.update();
 }
 
-void QuizController::finish(const QString &id) {
+void QuizController::finish(const QString &quiz_id, const QString &id) {
     if (httpRequest().method() != Tf::Post) {
         renderErrorResponse(Tf::NotFound);
         return;
@@ -77,6 +78,7 @@ void QuizController::finish(const QString &id) {
     user.update();
 
     CreditLog::create(id.toInt(), coins.toInt(), "Finished a quiz");
+    UserQuiz::create(id.toInt(), quiz_id.toInt());
 }
 
 void QuizController::create(const QString &id) {

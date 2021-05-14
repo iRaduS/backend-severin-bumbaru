@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_QuizController_t {
-    QByteArrayData data[9];
-    char stringdata0[59];
+    QByteArrayData data[10];
+    char stringdata0[67];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,16 +35,17 @@ static const qt_meta_stringdata_QuizController_t qt_meta_stringdata_QuizControll
 QT_MOC_LITERAL(0, 0, 14), // "QuizController"
 QT_MOC_LITERAL(1, 15, 6), // "finish"
 QT_MOC_LITERAL(2, 22, 0), // ""
-QT_MOC_LITERAL(3, 23, 2), // "id"
-QT_MOC_LITERAL(4, 26, 4), // "user"
-QT_MOC_LITERAL(5, 31, 4), // "show"
-QT_MOC_LITERAL(6, 36, 8), // "group_id"
-QT_MOC_LITERAL(7, 45, 6), // "remove"
-QT_MOC_LITERAL(8, 52, 6) // "create"
+QT_MOC_LITERAL(3, 23, 7), // "quiz_id"
+QT_MOC_LITERAL(4, 31, 2), // "id"
+QT_MOC_LITERAL(5, 34, 4), // "user"
+QT_MOC_LITERAL(6, 39, 4), // "show"
+QT_MOC_LITERAL(7, 44, 8), // "group_id"
+QT_MOC_LITERAL(8, 53, 6), // "remove"
+QT_MOC_LITERAL(9, 60, 6) // "create"
 
     },
-    "QuizController\0finish\0\0id\0user\0show\0"
-    "group_id\0remove\0create"
+    "QuizController\0finish\0\0quiz_id\0id\0"
+    "user\0show\0group_id\0remove\0create"
 };
 #undef QT_MOC_LITERAL
 
@@ -62,18 +63,18 @@ static const uint qt_meta_data_QuizController[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   39,    2, 0x0a /* Public */,
-       4,    1,   42,    2, 0x0a /* Public */,
-       5,    2,   45,    2, 0x0a /* Public */,
-       7,    2,   50,    2, 0x0a /* Public */,
-       8,    1,   55,    2, 0x0a /* Public */,
+       1,    2,   39,    2, 0x0a /* Public */,
+       5,    1,   44,    2, 0x0a /* Public */,
+       6,    2,   47,    2, 0x0a /* Public */,
+       8,    2,   52,    2, 0x0a /* Public */,
+       9,    1,   57,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,    6,    3,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,    6,    3,
-    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString,    3,    4,
+    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString,    7,    4,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString,    7,    4,
+    QMetaType::Void, QMetaType::QString,    4,
 
        0        // eod
 };
@@ -84,7 +85,7 @@ void QuizController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         auto *_t = static_cast<QuizController *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->finish((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 0: _t->finish((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
         case 1: _t->user((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 2: _t->show((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
         case 3: _t->remove((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;

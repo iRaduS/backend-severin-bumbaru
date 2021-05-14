@@ -2712,7 +2712,7 @@ var Quiz = function Quiz(_ref) {
                 creditForm.append('fifty', fifty);
                 creditForm.append('hint', hint);
                 _context2.next = 6;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/quiz/finish/".concat(props.user), creditForm);
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/quiz/finish/".concat(JSON.parse(props.quiz).id, "/").concat(props.user), creditForm);
 
               case 6:
               case "end":
@@ -3092,7 +3092,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".container {\n    margin-top: 70px;\n}\n.message-body, .message-header {\n    display: flex;\n    justify-content: center;\n}\n.message-header {\n    background-color: #88ecbd;\n    height: 55px;\n    font-size: 30px;\n}\n.progress {\n    margin: 10px auto;\n    width: 600px;\n}\n\n\n.button--custom {\n    padding: 0;\n    display: block;\n    width: 100%;\n    height: 80px;\n}\nimg {\n    display: block;\n    margin: 0 auto;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".container {\n    margin-top: 70px;\n}\n.message-body, .message-header {\n    display: flex;\n    justify-content: center;\n}\n.message-header {\n    background-color: #88ecbd;\n    height: 55px;\n    font-size: 30px;\n}\n.progress {\n    margin: 10px auto;\n    width: 600px;\n}\n\n\n.button--custom {\n    padding: 0;\n    display: block;\n    width: 100%;\n    height: 80px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -27,3 +27,6 @@ SOURCES += creditlog.cpp
 HEADERS += sqlobjects/quizobject.h
 HEADERS += quiz.h
 SOURCES += quiz.cpp
+HEADERS += sqlobjects/userquizobject.h
+HEADERS += userquiz.h
+SOURCES += userquiz.cpp

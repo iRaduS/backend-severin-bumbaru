@@ -34,7 +34,7 @@
         </td>
         
         <td>
-          <%== linkTo("Show", urla("show", i["id"]), a("class", "button is-link is-small")) %>
+          <%== linkTo("Quizzes", urla("show", i["id"]), a("class", "button is-link is-small")) %>
           <% if (i["role"] == 2) { %>
           <%== linkTo("Edit", urla("save", i["id"]), a("class", "button is-info is-small")) %>
           <%== linkTo("Remove", urla("remove", i["id"]), Tf::Post, "confirm('Are you sure?')", a("class", "button is-danger is-small")) %>

@@ -13,7 +13,7 @@ public:
 
 QString group_indexView::toString()
 {
-  responsebody.reserve(2801);
+  responsebody.reserve(2804);
   responsebody += QStringLiteral("<h1 class=\"title\">Enter Group</h1>\n");
   responsebody += QVariant(formTag(urla("join"), Tf::Post, true, a("class", "box"))).toString();
   responsebody += QStringLiteral("\n  <div class=\"field\">\n    <label class=\"label\">Group code</label>\n    <div class=\"control\">\n      <input class=\"input\" type=\"text\" name=\"invite\" placeholder=\"e.g. dzcadav\" />\n    </div>\n  </div>\n  <button class=\"button is-link\" type=\"submit\">Enter code</button>\n</form>\n\n<h1 class=\"title\">Listing Group</h1>\n<div class=\"box is-flex is-justify-content-center is-align-items-center\">\n  <table class=\"table is-fullwidth\">\n    <thead>\n      <tr>\n        <th><abbr title=\"Group name\">Group name</abbr></th>\n        <th><abbr title=\"Users in group\">Users in group</abbr></th>\n        <th><abbr title=\"Role in group\">Role in group</abbr></th>\n        <th><abbr title=\"Options\">Options</abbr></th>\n      </tr>\n    </thead>\n    ");
@@ -29,7 +29,7 @@ QString group_indexView::toString()
   responsebody += QStringLiteral("\">\n            ");
   responsebody += THttpUtility::htmlEscape(i["role"] == 2 ? "Teacher" : "Student");
   responsebody += QStringLiteral("\n          </span>\n        </td>\n        \n        <td>\n          ");
-  responsebody += QVariant(linkTo("Show", urla("show", i["id"]), a("class", "button is-link is-small"))).toString();
+  responsebody += QVariant(linkTo("Quizzes", urla("show", i["id"]), a("class", "button is-link is-small"))).toString();
   responsebody += QStringLiteral("\n          ");
   if (i["role"] == 2) {
   responsebody += QStringLiteral("          ");

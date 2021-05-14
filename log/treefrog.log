@@ -4039,3 +4039,38 @@
 2021-05-14 08:45:19 WARN  [1254601] Reading a socket timed out after 10 seconds. Descriptor:16
 2021-05-14 08:45:33 WARN  [1254782] Reading a socket timed out after 10 seconds. Descriptor:15
 2021-05-14 08:45:33 WARN  [1254600] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 08:46:20 WARN  [1256099] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 08:46:23 WARN  [1256097] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 08:47:38 WARN  [1257086] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 08:47:38 WARN  [1257085] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 08:47:59 WARN  [1257422] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 08:48:09 WARN  [1257502] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 08:48:19 WARN  [1257420] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 08:49:46 INFO  [65951] TreeFrog application servers shutting down
+2021-05-14 08:49:46 INFO  [65951] TreeFrog application servers shutdown completed
+2021-05-14 08:49:46 INFO  [65951] Restarts TreeFrog application servers
+2021-05-14 08:49:46 INFO  [65951] TreeFrog Framework version 1.31.1
+2021-05-14 08:49:46 INFO  [65951] Execution environment: Qt 5.15.2 / macOS 11.2
+2021-05-14 08:49:46 INFO  [65951] TreeFrog application servers started up.
+2021-05-14 08:49:58 WARN  [1258973] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 08:50:04 WARN  [1258971] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 08:50:31 WARN  [1259355] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 08:50:31 WARN  [1259353] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 08:50:51 WARN  [1259735] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 08:51:07 WARN  [1259849] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 08:51:20 WARN  [1259926] Reading a socket timed out after 10 seconds. Descriptor:17
+2021-05-14 08:51:30 WARN  [1259733] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 09:01:36 INFO  [65951] TreeFrog application servers shutting down
+2021-05-14 09:01:37 INFO  [65951] TreeFrog application servers shutdown completed
+2021-05-14 09:01:37 INFO  [65951] Restarts TreeFrog application servers
+2021-05-14 09:01:37 INFO  [65951] TreeFrog Framework version 1.31.1
+2021-05-14 09:01:37 INFO  [65951] Execution environment: Qt 5.15.2 / macOS 11.2
+2021-05-14 09:01:37 INFO  [65951] TreeFrog application servers started up.
+2021-05-14 09:01:58 WARN  [1265872] Reading a socket timed out after 10 seconds. Descriptor:15
+2021-05-14 09:02:05 WARN  [1265871] Reading a socket timed out after 10 seconds. Descriptor:13
+2021-05-14 09:05:11 INFO  [65951] TreeFrog application servers shutting down
+2021-05-14 09:05:11 INFO  [65951] TreeFrog application servers shutdown completed
+2021-05-14 09:05:11 INFO  [65951] Restarts TreeFrog application servers
+2021-05-14 09:05:11 INFO  [65951] TreeFrog Framework version 1.31.1
+2021-05-14 09:05:11 INFO  [65951] Execution environment: Qt 5.15.2 / macOS 11.2
+2021-05-14 09:05:11 INFO  [65951] TreeFrog application servers started up.
